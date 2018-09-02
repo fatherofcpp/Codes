@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.691962742/PATH/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.691962742/PATH/operation=replace
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.691962742/PATH/value=/bin\:/usr/lib/lightdm/lightdm\:/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/usr/games\:/opt/FriendlyARM/toolschain/4.5.1/bin
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.691962742/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.691962742/appendContributed=true
