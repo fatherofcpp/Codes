@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ThirdPart">
+      <UniqueIdentifier>{0ec1bf96-c0e9-4f13-a8d1-c7c46fddbbae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{e7897c41-db20-47f4-91d7-19cc0d5cc4ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\xml">
+      <UniqueIdentifier>{4bba858c-fdf8-450d-901b-09e73000b3c7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\Test.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Test.ico">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\Thread\CmThread.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\Thread\CmThreadPool.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\Socket\CmAbstractTransf.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\Socket\CmTransTcp.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\Socket\CmTransUdp.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\Serial\CmSerial.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\Log\CmLog.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\DataBase\CmAbstractDataBase.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\DataBase\CmDBMySql.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\CmFunction\CmDefStruct.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\CmFunction\CmFunction.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\CmFunction\CmDefType.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\MString\CmMString.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\DataBase\CmDBSqlite.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\thirdPart\ijl\Cmijlutil.h">
+      <Filter>ThirdPart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\thirdPart\opencv\CmCvvImage.h">
+      <Filter>ThirdPart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\thirdPart\opencv\CmOpenCvDll.h">
+      <Filter>ThirdPart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\thirdPart\openssl\Aes\CmAes.h">
+      <Filter>ThirdPart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\xml\bufobj.h">
+      <Filter>Utility\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\xml\hash.h">
+      <Filter>Utility\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\xml\mmem.h">
+      <Filter>Utility\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\xml\MMmem.h">
+      <Filter>Utility\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\xml\mty.h">
+      <Filter>Utility\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\xml\utils.h">
+      <Filter>Utility\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\xml\xmlnode.h">
+      <Filter>Utility\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\xml\xmlparse.h">
+      <Filter>Utility\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Utility\xml\xr.h">
+      <Filter>Utility\xml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\Thread\CmThread.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\Thread\CmThreadPool.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\Socket\CmAbstractTransf.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\Socket\CmTransTcp.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\Socket\CmTransUdp.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\Serial\CmSerial.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\Log\CmLog.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\DataBase\CmAbstractDataBase.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\DataBase\CmDBMySql.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\CmFunction\CmFunction.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\MString\CmMString.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\DataBase\CmDBSqlite.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\thirdPart\ijl\Cmijlutil.cpp">
+      <Filter>ThirdPart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\thirdPart\opencv\CmCvvImage.cpp">
+      <Filter>ThirdPart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\thirdPart\opencv\CmOpenCvDll.cpp">
+      <Filter>ThirdPart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\thirdPart\openssl\Aes\CmAes.cpp">
+      <Filter>ThirdPart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\xml\bufobj.cpp">
+      <Filter>Utility\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\xml\hash.cpp">
+      <Filter>Utility\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\xml\mem.cpp">
+      <Filter>Utility\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\xml\utils.cpp">
+      <Filter>Utility\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\xml\xmlnode.cpp">
+      <Filter>Utility\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\xml\xmlparse.cpp">
+      <Filter>Utility\xml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Test.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
