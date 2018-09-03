@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6aee3e12-2fa8-47b4-98a3-ac4a948151dd"
+  name="ModelingProjectStrategy" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="3be38681-3bcf-4297-a710-e5302f5eea6a"
+        name="IStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e4f98dac-a68b-44cf-99dc-feb9ac1db8ef"
+        name="CContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="6a4391d6-e910-4ad3-98e0-b97ea3a7f31a">
+            <classMoniker
+              Id="3be38681-3bcf-4297-a710-e5302f5eea6a"
+              LastKnownName="IStrategy"
+              LastKnownLocation="ModelingProjectStrategy.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="20497444-8d36-4e40-aa0a-88c9d879f51b"
+        name="CBackDoor"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="0ef7ab43-7713-4238-8247-fd06d8ad09b1"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3be38681-3bcf-4297-a710-e5302f5eea6a"
+              LastKnownName="IStrategy"
+              LastKnownLocation="ModelingProjectStrategy.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="971d9b3b-8e08-4c0b-b33a-cab97cc7633d"
+        name="CGivenGreenLight"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="481b0cbb-07b1-4619-be4e-4e2705bda113"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3be38681-3bcf-4297-a710-e5302f5eea6a"
+              LastKnownName="IStrategy"
+              LastKnownLocation="ModelingProjectStrategy.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="798806a9-6dcc-4697-bf00-566e74343d27"
+        name="CBlockEnemy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="c203bdf3-e9c9-47c5-a74c-a083c1dcb600"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3be38681-3bcf-4297-a710-e5302f5eea6a"
+              LastKnownName="IStrategy"
+              LastKnownLocation="ModelingProjectStrategy.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5309315e-006f-4011-9782-307ee097847f"
+        name="CZhaoYun"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="e500eb01-ec63-482f-b535-43b49e11eee1"
+            isDerived="false"
+            sourceEndRoleName="CZhaoYun"
+            targetEndRoleName="CContext"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e4f98dac-a68b-44cf-99dc-feb9ac1db8ef"
+              LastKnownName="CContext"
+              LastKnownLocation="ModelingProjectStrategy.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aa4afc07-3eb2-43d4-995d-c73b5eaa04b9"
+                  name="CZhaoYun"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c3761cc0-8b4b-431c-b41c-341a11fb929a"
+                  name="CContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

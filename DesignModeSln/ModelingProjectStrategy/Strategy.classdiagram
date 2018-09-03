@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="d00c4413-13b2-4b45-87cc-27294eae2434" name="UMLClassDiagram1" linkedPackageId="d0f487bf-f81f-4abb-b5d8-4884c472407e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="bdf5ce70-720c-4629-af82-c9fe332553b9">
+      <profileInstance Id="9ee53a8c-cdb7-453d-afa1-bc58d6a05879" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="5544336c-1a52-4a49-8627-0f4147927bd5">
+      <profileInstance Id="fc0fbd4c-348c-47ca-940c-d1120aa426bb" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6fd0cefc-33fb-4f21-9852-6ae9a3a263b3" name="IStrategy" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3be38681-3bcf-4297-a710-e5302f5eea6a" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0ac94bd3-7be0-4372-9141-c5031eed7a28" name="CContext" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e4f98dac-a68b-44cf-99dc-feb9ac1db8ef" />
+        <suppliersInternal>
+          <dependency Id="aa2edb73-3941-4b92-9e80-85700b882280">
+            <classMoniker Id="6fd0cefc-33fb-4f21-9852-6ae9a3a263b3" LastKnownName="IStrategy" />
+            <elementDefinition Id="6a4391d6-e910-4ad3-98e0-b97ea3a7f31a" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f543b20f-d08f-427d-96ec-242c08eda1f2" name="CBackDoor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="20497444-8d36-4e40-aa0a-88c9d879f51b" />
+        <generalsInternal>
+          <generalization Id="92689fbf-d6eb-42f1-ae7b-39fe4735bf9b" isSubstitutable="false">
+            <classMoniker Id="6fd0cefc-33fb-4f21-9852-6ae9a3a263b3" LastKnownName="IStrategy" />
+            <elementDefinition Id="0ef7ab43-7713-4238-8247-fd06d8ad09b1" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fb7fd2fb-f8f0-498b-9c83-0893a47fc870" name="CGivenGreenLight" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="971d9b3b-8e08-4c0b-b33a-cab97cc7633d" />
+        <generalsInternal>
+          <generalization Id="cb6aae45-abb7-41aa-930a-36efad6357d2" isSubstitutable="false">
+            <classMoniker Id="6fd0cefc-33fb-4f21-9852-6ae9a3a263b3" LastKnownName="IStrategy" />
+            <elementDefinition Id="481b0cbb-07b1-4619-be4e-4e2705bda113" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="086c1562-385a-4618-a09b-a75910723d73" name="CBlockEnemy" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="798806a9-6dcc-4697-bf00-566e74343d27" />
+        <generalsInternal>
+          <generalization Id="5c691246-ff32-4d29-abd6-cf76a3ea02e3" isSubstitutable="false">
+            <classMoniker Id="6fd0cefc-33fb-4f21-9852-6ae9a3a263b3" LastKnownName="IStrategy" />
+            <elementDefinition Id="c203bdf3-e9c9-47c5-a74c-a083c1dcb600" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4b96cdd5-c82c-41f9-a15a-4ca81575ce33" name="CZhaoYun" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5309315e-006f-4011-9782-307ee097847f" />
+        <targetEnds>
+          <association Id="3e4d1a1b-ae08-49a2-90b6-6e12f40269e7" isDerived="false" sourceEndRoleName="CZhaoYun" targetEndRoleName="CContext" isLeaf="false" isAbstract="false">
+            <classMoniker Id="0ac94bd3-7be0-4372-9141-c5031eed7a28" LastKnownName="CContext" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="64426189-a22f-487e-982a-09028b9f3d29" name="CZhaoYun" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="aa4afc07-3eb2-43d4-995d-c73b5eaa04b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e3c51703-c20c-44f9-b71b-073cc0641491" name="CContext" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c3761cc0-8b4b-431c-b41c-341a11fb929a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e500eb01-ec63-482f-b535-43b49e11eee1" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="d0f487bf-f81f-4abb-b5d8-4884c472407e" name="ModelingProjectStrategy">
+    <elementDefinition Id="6aee3e12-2fa8-47b4-98a3-ac4a948151dd" />
+  </package>
+</logicalClassDesignerModel>

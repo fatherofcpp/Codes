@@ -1,0 +1,12 @@
+#pragma once
+#include "istrategy.h"
+//²ßÂÔÖ®Èý
+class CBlockEnemy :
+	public IStrategy
+{
+public:
+	CBlockEnemy(void);
+	~CBlockEnemy(void);
+	void Operate(void);
+};
+
