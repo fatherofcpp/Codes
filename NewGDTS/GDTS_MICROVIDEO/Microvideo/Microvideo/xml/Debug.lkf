@@ -1,0 +1,6 @@
+-r
+"E:\DM6446\HOST-DM642\xml\Debug\xmllib.lib"
+"E:\DM6446\HOST-DM642\xml\Debug\hash.obj"
+"E:\DM6446\HOST-DM642\xml\Debug\utils.obj"
+"E:\DM6446\HOST-DM642\xml\Debug\xmlnode.obj"
+"E:\DM6446\HOST-DM642\xml\Debug\xmlparse.obj"
