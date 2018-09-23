@@ -1,0 +1,34 @@
+﻿生成启动时间为 2018/4/2 19:54:47。
+     1>项目“D:\当前备份\svn\PanMonitorSystem\u盘监测程序\Source\UdiskVerify\MakeLisence\MakeLisence.vcxproj”在节点 3 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Release\MakeLisence.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“Release\MakeLisence.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../utility /IC:\SourceCode\Utility /IC:\SourceCode\Utility\CmFunction /IC:\SourceCode\thirdPart /IC:\SourceCode\thirdPart\opencv /IC:\SourceCode\thirdPart\opencv\opencv\build\include /IC:\SourceCode\thirdPart\opencv\opencv\build\include\opencv /IC:\SourceCode\thirdPart\opencv\opencv\build\include\opencv2 /IC:\SourceCode\thirdPart\libevent /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\MakeLisence.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../utility /IC:\SourceCode\Utility /IC:\SourceCode\Utility\CmFunction /IC:\SourceCode\thirdPart /IC:\SourceCode\thirdPart\opencv /IC:\SourceCode\thirdPart\opencv\opencv\build\include /IC:\SourceCode\thirdPart\opencv\opencv\build\include\opencv /IC:\SourceCode\thirdPart\opencv\opencv\build\include\opencv2 /IC:\SourceCode\thirdPart\libevent /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\MakeLisence.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\utility\FileReadWrite.cpp MakeLisence.cpp MakeLisenceDlg.cpp
+         FileReadWrite.cpp
+         MakeLisence.cpp
+         MakeLisenceDlg.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /l"0x0804" /IRelease\ /nologo /fo"Release\MakeLisence.res" MakeLisence.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\当前备份\svn\PanMonitorSystem\u盘监测程序\Source\UdiskVerify\Release\MakeLisence.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\SourceCode\thirdPart\ijl /LIBPATH:C:\SourceCode\thirdPart\libevent /LIBPATH:C:\SourceCode\thirdPart\mysql /LIBPATH:C:\SourceCode\thirdPart\openssl /LIBPATH:C:\SourceCode\thirdPart\sqlite /LIBPATH:C:\SourceCode\thirdPart\opencv\opencv\build\x86\vc10\bin /LIBPATH:C:\SourceCode\thirdPart\opencv\opencv\build\x86\vc10\lib /MANIFEST /ManifestFile:"Release\MakeLisence.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\当前备份\svn\PanMonitorSystem\u盘监测程序\Source\UdiskVerify\Release\MakeLisence.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\当前备份\svn\PanMonitorSystem\u盘监测程序\Source\UdiskVerify\Release\MakeLisence.lib" /MACHINE:X86 Release\MakeLisence.res
+         Release\FileReadWrite.obj
+         Release\MakeLisence.obj
+         Release\MakeLisenceDlg.obj
+         Release\stdafx.obj
+         正在生成代码
+         已完成代码的生成
+         MakeLisence.vcxproj -> D:\当前备份\svn\PanMonitorSystem\u盘监测程序\Source\UdiskVerify\Release\MakeLisence.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\当前备份\svn\PanMonitorSystem\u盘监测程序\Source\UdiskVerify\Release\MakeLisence.exe;#1" /manifest Release\MakeLisence.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“Release\MakeLisence.unsuccessfulbuild”。
+         正在对“Release\MakeLisence.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\当前备份\svn\PanMonitorSystem\u盘监测程序\Source\UdiskVerify\MakeLisence\MakeLisence.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:07.73

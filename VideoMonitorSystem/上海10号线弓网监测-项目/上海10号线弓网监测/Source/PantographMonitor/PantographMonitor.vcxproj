@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{43DDAB2A-BD4E-48F0-886A-6E93DD473AA7}</ProjectGuid>
+    <RootNamespace>PantographMonitor</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\Bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\Bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)$(ProjectName);$(SolutionDir)..\..\CommonLib;$(SolutionDir)..\..\CommonLib\LibInclude;$(SolutionDir)..\..\CommonLib\LibInclude\Cameras;$(SolutionDir)..\..\..\SourceCode\Utility;$(SolutionDir)..\..\..\SourceCode\Utility\CmFunction;$(SolutionDir)..\..\..\SourceCode\thirdPart;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv\opencv\build\include;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv\opencv\build\include\opencv;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv\opencv\build\include\opencv2;$(SolutionDir)..\..\..\SourceCode\thirdPart\libevent;$(PYLON_ROOT)\include;$(PYLON_GENICAM_ROOT)\library\CPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\..\SourceCode\thirdPart\ijl;$(SolutionDir)..\..\..\SourceCode\thirdPart\libevent;$(SolutionDir)..\..\..\SourceCode\thirdPart\mysql;$(SolutionDir)..\..\..\SourceCode\thirdPart\openssl;$(SolutionDir)..\..\..\SourceCode\thirdPart\sqlite;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv\opencv\build\x86\vc10\bin;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv\opencv\build\x86\vc10\lib;$(PYLON_GENICAM_ROOT)\library\CPP\Lib\win32_i86;$(PYLON_ROOT)\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)$(ProjectName);$(SolutionDir)..\..\CommonLib;$(SolutionDir)..\..\CommonLib\LibInclude;$(SolutionDir)..\..\CommonLib\LibInclude\Cameras;$(SolutionDir)..\..\..\SourceCode\Utility;$(SolutionDir)..\..\..\SourceCode\Utility\CmFunction;$(SolutionDir)..\..\..\SourceCode\thirdPart;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv\opencv\build\include;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv\opencv\build\include\opencv;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv\opencv\build\include\opencv2;$(SolutionDir)..\..\..\SourceCode\thirdPart\libevent;$(PYLON_ROOT)\include;$(PYLON_GENICAM_ROOT)\library\CPP\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\..\SourceCode\thirdPart\ijl;$(SolutionDir)..\..\..\SourceCode\thirdPart\libevent;$(SolutionDir)..\..\..\SourceCode\thirdPart\mysql;$(SolutionDir)..\..\..\SourceCode\thirdPart\openssl;$(SolutionDir)..\..\..\SourceCode\thirdPart\sqlite;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv\opencv\build\x86\vc10\bin;$(SolutionDir)..\..\..\SourceCode\thirdPart\opencv\opencv\build\x86\vc10\lib;$(PYLON_GENICAM_ROOT)\library\CPP\Lib\win32_i86;$(PYLON_ROOT)\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\PantographMonitor.ico" />
+    <None Include="res\PantographMonitor.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\SourceCode\thirdPart\ijl\Cmijlutil.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\thirdPart\opencv\CmCvvImage.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\thirdPart\opencv\CmOpenCvDll.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\CmFunction\CmDefStruct.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\CmFunction\CmDefType.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\CmFunction\CmFunction.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\DataBase\CmAbstractDataBase.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\DataBase\CmDBMySql.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\Log\CmLog.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\Serial\CmSerial.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\Socket\CmAbstractTransf.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\Socket\CmTransTcp.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\Socket\CmTransUdp.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\Thread\CmThread.h" />
+    <ClInclude Include="..\..\..\..\SourceCode\Utility\Thread\CmThreadPool.h" />
+    <ClInclude Include="Basler\BaslerCamera.h" />
+    <ClInclude Include="Basler\BYInterface.h" />
+    <ClInclude Include="Basler\Camera.h" />
+    <ClInclude Include="Basler\CameraFactory.h" />
+    <ClInclude Include="Basler\cfg.h" />
+    <ClInclude Include="Basler\CLog.h" />
+    <ClInclude Include="Basler\Common.h" />
+    <ClInclude Include="Basler\DAS.h" />
+    <ClInclude Include="Basler\FIFO.h" />
+    <ClInclude Include="Basler\ippcore.h" />
+    <ClInclude Include="Basler\ippdefs.h" />
+    <ClInclude Include="Basler\ippi.h" />
+    <ClInclude Include="Basler\ippj.h" />
+    <ClInclude Include="Basler\ipps.h" />
+    <ClInclude Include="Basler\LoopBuf.h" />
+    <ClInclude Include="Basler\MyBalserUse.h" />
+    <ClInclude Include="Basler\PicZoom.h" />
+    <ClInclude Include="Basler\Precess.h" />
+    <ClInclude Include="Basler\QueueRT.h" />
+    <ClInclude Include="Basler\SaveThread.h" />
+    <ClInclude Include="Basler\Thread.h" />
+    <ClInclude Include="Basler\Udp.h" />
+    <ClInclude Include="Basler\Utils.h" />
+    <ClInclude Include="BsAbstractAnalyse.h" />
+    <ClInclude Include="BsAbstractServiceNet.h" />
+    <ClInclude Include="BsArcCollector.h" />
+    <ClInclude Include="BsAbstractCamera.h" />
+    <ClInclude Include="BsAlarm.h" />
+    <ClInclude Include="BsArcNotify.h" />
+    <ClInclude Include="BsDbRoot.h" />
+    <ClInclude Include="BsDbTbAlarmInfo.h" />
+    <ClInclude Include="BsDbTbRecordInfo.h" />
+    <ClInclude Include="BsFunction.h" />
+    <ClInclude Include="BsGeoParamAnalyse.h" />
+    <ClInclude Include="BsServicePtu.h" />
+    <ClInclude Include="BsStructAnalyse.h" />
+    <ClInclude Include="BsTemprateAnalyse.h" />
+    <ClInclude Include="BsDefClsFrameInf.h" />
+    <ClInclude Include="BsDefStruct.h" />
+    <ClInclude Include="BsGlobal.h" />
+    <ClInclude Include="BsMainTask.h" />
+    <ClInclude Include="BsMonitor.h" />
+    <ClInclude Include="BsMvb.h" />
+    <ClInclude Include="BsServicePis.h" />
+    <ClInclude Include="BsDllCamPicture.h" />
+    <ClInclude Include="BsDllCamVideo.h" />
+    <ClInclude Include="BsDllMvb.h" />
+    <ClInclude Include="BsDllFrameAnalyze.h" />
+    <ClInclude Include="BsDbTbRtInfo.h" />
+    <ClInclude Include="BsDbTbStationInfo.h" />
+    <ClInclude Include="PantographMonitor.h" />
+    <ClInclude Include="PantographMonitorDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="BsServiceSpare.h" />
+    <ClInclude Include="BsServiceHKPis.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="BsTimeStamp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\SourceCode\thirdPart\ijl\Cmijlutil.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\thirdPart\opencv\CmCvvImage.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\thirdPart\opencv\CmOpenCvDll.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\Utility\CmFunction\CmFunction.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\Utility\DataBase\CmAbstractDataBase.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\Utility\DataBase\CmDBMySql.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\Utility\Log\CmLog.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\Utility\Serial\CmSerial.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\Utility\Socket\CmAbstractTransf.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\Utility\Socket\CmTransTcp.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\Utility\Socket\CmTransUdp.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\Utility\Thread\CmThread.cpp" />
+    <ClCompile Include="..\..\..\..\SourceCode\Utility\Thread\CmThreadPool.cpp" />
+    <ClCompile Include="Basler\BaslerCamera.cpp" />
+    <ClCompile Include="Basler\Camera.cpp" />
+    <ClCompile Include="Basler\CameraFactory.cpp" />
+    <ClCompile Include="Basler\cfg.cpp" />
+    <ClCompile Include="Basler\CLog.cpp" />
+    <ClCompile Include="Basler\Common.cpp" />
+    <ClCompile Include="Basler\DAS.cpp" />
+    <ClCompile Include="Basler\LoopBuf.cpp" />
+    <ClCompile Include="Basler\MyBalserUse.cpp" />
+    <ClCompile Include="Basler\PicZoom.cpp" />
+    <ClCompile Include="Basler\Precess.cpp" />
+    <ClCompile Include="Basler\SaveThread.cpp" />
+    <ClCompile Include="Basler\Udp.cpp" />
+    <ClCompile Include="Basler\Utils.cpp" />
+    <ClCompile Include="BsAbstractAnalyse.cpp" />
+    <ClCompile Include="BsAbstractServiceNet.cpp" />
+    <ClCompile Include="BsArcCollector.cpp" />
+    <ClCompile Include="BsAbstractCamera.cpp" />
+    <ClCompile Include="BsAlarm.cpp" />
+    <ClCompile Include="BsArcNotify.cpp" />
+    <ClCompile Include="BsDbRoot.cpp" />
+    <ClCompile Include="BsDbTbAlarmInfo.cpp" />
+    <ClCompile Include="BsDbTbRecordInfo.cpp" />
+    <ClCompile Include="BsFunction.cpp" />
+    <ClCompile Include="BsGeoParamAnalyse.cpp" />
+    <ClCompile Include="BsServicePtu.cpp" />
+    <ClCompile Include="BsStructAnalyse.cpp" />
+    <ClCompile Include="BsTemprateAnalyse.cpp" />
+    <ClCompile Include="BsDefClsFrameInf.cpp" />
+    <ClCompile Include="BsGlobal.cpp" />
+    <ClCompile Include="BsMainTask.cpp" />
+    <ClCompile Include="BsMonitor.cpp" />
+    <ClCompile Include="BsMvb.cpp" />
+    <ClCompile Include="BsServicePis.cpp" />
+    <ClCompile Include="BsDllCamPicture.cpp" />
+    <ClCompile Include="BsDllCamVideo.cpp" />
+    <ClCompile Include="BsDllMvb.cpp" />
+    <ClCompile Include="BsDllFrameAnalyze.cpp" />
+    <ClCompile Include="BsDbTbRtInfo.cpp" />
+    <ClCompile Include="BsDbTbStationInfo.cpp" />
+    <ClCompile Include="PantographMonitor.cpp" />
+    <ClCompile Include="PantographMonitorDlg.cpp" />
+    <ClCompile Include="BsServiceSpare.cpp" />
+    <ClCompile Include="BsServiceHKPis.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="BsTimeStamp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PantographMonitor.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

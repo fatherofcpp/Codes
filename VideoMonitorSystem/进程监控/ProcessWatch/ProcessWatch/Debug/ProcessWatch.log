@@ -1,0 +1,51 @@
+﻿生成启动时间为 2018/4/18 17:13:13。
+     1>项目“D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\ProcessWatch\ProcessWatch.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\ProcessWatch.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\\" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\ProcessWatch" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\Utility" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\Utility\CmFunction" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\opencv" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\opencv\opencv\build\include" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\opencv\opencv\build\include\opencv" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\opencv\opencv\build\include\opencv2" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\libevent" /I"C:\Program Files\Basler\pylon 3.2\pylon\include" /I"C:\Program Files\Basler\pylon 3.2\genicam\library\CPP\include" /IC:\SourceCode\Utility /IC:\SourceCode\Utility\CmFunction /IC:\SourceCode\thirdPart /IC:\SourceCode\thirdPart\opencv /IC:\SourceCode\thirdPart\opencv\opencv\build\include /IC:\SourceCode\thirdPart\opencv\opencv\build\include\opencv /IC:\SourceCode\thirdPart\opencv\opencv\build\include\opencv2 /IC:\SourceCode\thirdPart\libevent /I"C:\Program Files\Basler\pylon 3.2\pylon\include" /I"C:\Program Files\Basler\pylon 3.2\genicam\library\CPP\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\ProcessWatch.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\\" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\ProcessWatch" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\Utility" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\Utility\CmFunction" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\opencv" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\opencv\opencv\build\include" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\opencv\opencv\build\include\opencv" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\opencv\opencv\build\include\opencv2" /I"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\libevent" /I"C:\Program Files\Basler\pylon 3.2\pylon\include" /I"C:\Program Files\Basler\pylon 3.2\genicam\library\CPP\include" /IC:\SourceCode\Utility /IC:\SourceCode\Utility\CmFunction /IC:\SourceCode\thirdPart /IC:\SourceCode\thirdPart\opencv /IC:\SourceCode\thirdPart\opencv\opencv\build\include /IC:\SourceCode\thirdPart\opencv\opencv\build\include\opencv /IC:\SourceCode\thirdPart\opencv\opencv\build\include\opencv2 /IC:\SourceCode\thirdPart\libevent /I"C:\Program Files\Basler\pylon 3.2\pylon\include" /I"C:\Program Files\Basler\pylon 3.2\genicam\library\CPP\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\ProcessWatch.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\SourceCode\thirdPart\ijl\Cmijlutil.cpp ..\..\..\SourceCode\Utility\CmFunction\CmFunction.cpp ..\..\..\SourceCode\Utility\Log\CmLog.cpp ..\..\..\SourceCode\Utility\Socket\CmAbstractTransf.cpp ..\..\..\SourceCode\Utility\Socket\CmTransTcp.cpp ..\..\..\SourceCode\Utility\Socket\CmTransUdp.cpp ..\..\..\SourceCode\Utility\Thread\CmThread.cpp ..\..\..\SourceCode\Utility\Thread\CmThreadPool.cpp ProcessWatch.cpp ProcessWatchDlg.cpp
+         ProcessWatchDlg.cpp
+         ProcessWatch.cpp
+         CmThreadPool.cpp
+         CmThread.cpp
+         CmTransUdp.cpp
+         CmTransTcp.cpp
+         CmAbstractTransf.cpp
+         CmLog.cpp
+         CmFunction.cpp
+         Cmijlutil.cpp
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\ProcessWatch.res" ProcessWatch.rc 
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\ProcessWatch.exe.embed.manifest.res" Debug\ProcessWatch_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\Debug\ProcessWatch.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\ijl" /LIBPATH:"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\libevent" /LIBPATH:"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\mysql" /LIBPATH:"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\openssl" /LIBPATH:"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\sqlite" /LIBPATH:"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\opencv\opencv\build\x86\vc10\bin" /LIBPATH:"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\..\..\SourceCode\thirdPart\opencv\opencv\build\x86\vc10\lib" /LIBPATH:"C:\Program Files\Basler\pylon 3.2\genicam\library\CPP\Lib\win32_i86" /LIBPATH:"C:\Program Files\Basler\pylon 3.2\pylon\lib\Win32" /LIBPATH:C:\SourceCode\thirdPart\ijl /LIBPATH:C:\SourceCode\thirdPart\libevent /LIBPATH:C:\SourceCode\thirdPart\mysql /LIBPATH:C:\SourceCode\thirdPart\openssl /LIBPATH:C:\SourceCode\thirdPart\sqlite /LIBPATH:C:\SourceCode\thirdPart\opencv\opencv\build\x86\vc10\bin /LIBPATH:C:\SourceCode\thirdPart\opencv\opencv\build\x86\vc10\lib /LIBPATH:"C:\Program Files\Basler\pylon 3.2\genicam\library\CPP\Lib\win32_i86" /LIBPATH:"C:\Program Files\Basler\pylon 3.2\pylon\lib\Win32" /MANIFEST /ManifestFile:"Debug\ProcessWatch.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\Debug\ProcessWatch.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\Debug\ProcessWatch.lib" /MACHINE:X86 Debug\ProcessWatch.res
+         Debug\ProcessWatch.exe.embed.manifest.res
+         Debug\Cmijlutil.obj
+         Debug\CmFunction.obj
+         Debug\CmLog.obj
+         Debug\CmAbstractTransf.obj
+         Debug\CmTransTcp.obj
+         Debug\CmTransUdp.obj
+         Debug\CmThread.obj
+         Debug\CmThreadPool.obj
+         Debug\ProcessWatch.obj
+         Debug\ProcessWatchDlg.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\ProcessWatch.exe.embed.manifest" /manifest Debug\ProcessWatch.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         ProcessWatch.vcxproj -> D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\Debug\ProcessWatch.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\ProcessWatch.unsuccessfulbuild”。
+         正在对“Debug\ProcessWatch.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\WorkSpace\当前备份\svn\PanMonitorSystem\进程监控\ProcessWatch\ProcessWatch\ProcessWatch.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:19.72
