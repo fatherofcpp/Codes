@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CClearDialog</class>
+ <widget class="QDialog" name="CClearDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>788</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_id">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>90</y>
+     <width>71</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_id">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>90</y>
+     <width>181</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_id">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>90</y>
+     <width>71</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>设置</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear_a_all">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>160</y>
+     <width>160</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清除全部电能</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear_a_m">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>200</y>
+     <width>160</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清除A路进线电能</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear_b_m">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>200</y>
+     <width>160</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清除B路进线电能</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pre_page">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>340</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_next_page">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>340</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_return_back">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>340</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear_a_sub">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>240</y>
+     <width>160</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清除A路出线电能</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear_b_sub">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>240</y>
+     <width>160</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清除B路出线电能</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_time">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>20</y>
+     <width>71</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_time">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>20</y>
+     <width>71</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>设置</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_time">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>20</y>
+     <width>181</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_upgrade">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>240</y>
+     <width>160</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>优盘升级</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_time_example">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>50</y>
+     <width>321</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear_a_frozen_energy">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>160</y>
+     <width>160</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清除全部冻结电能</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pwd_modify">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>200</y>
+     <width>160</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>密码修改</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_reboot">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>280</y>
+     <width>160</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>重启系统</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_version">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>160</y>
+     <width>160</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>版本信息</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CMyQLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>keyboard/myqlineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

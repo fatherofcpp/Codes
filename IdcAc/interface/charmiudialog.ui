@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CHarmIUDialog</class>
+ <widget class="QDialog" name="CHarmIUDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>788</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QCustomPlot" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>751</width>
+     <height>231</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pre_page">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>340</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_next_page">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>340</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_return_back">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>340</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>751</width>
+     <height>53</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pre_list">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>70</y>
+     <width>71</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>向前</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_next_list">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>70</y>
+     <width>71</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>向后</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

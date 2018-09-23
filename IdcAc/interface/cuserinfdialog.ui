@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CUserInfDialog</class>
+ <widget class="QDialog" name="CUserInfDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>788</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>91</x>
+     <y>51</y>
+     <width>300</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>用户名</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>91</x>
+     <y>144</y>
+     <width>300</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>密码</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>91</x>
+     <y>197</y>
+     <width>300</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>新密码</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>91</x>
+     <y>250</y>
+     <width>300</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确认密码</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ok">
+   <property name="geometry">
+    <rect>
+     <x>91</x>
+     <y>303</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确认</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_cancel">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>303</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_user_name">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>51</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_pwd">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>144</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_new_pwd">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>197</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_ensure_new_pwd">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>250</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>91</x>
+     <y>100</y>
+     <width>300</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>用户描述</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_descript">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>100</y>
+     <width>300</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CMyQLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>keyboard/myqlineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

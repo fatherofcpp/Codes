@@ -1,0 +1,1526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CWarnThresholdDialog</class>
+ <widget class="QDialog" name="CWarnThresholdDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>788</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_title">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>291</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_1">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_1">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>110</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_1">
+   <property name="geometry">
+    <rect>
+     <x>116</x>
+     <y>110</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_1">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>110</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>110</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_2">
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>110</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>110</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_2">
+   <property name="geometry">
+    <rect>
+     <x>306</x>
+     <y>110</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_4">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>110</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_3">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>110</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_4">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>110</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_3">
+   <property name="geometry">
+    <rect>
+     <x>526</x>
+     <y>110</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_3">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>110</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_4">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>110</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_4">
+   <property name="geometry">
+    <rect>
+     <x>686</x>
+     <y>110</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_3">
+   <property name="geometry">
+    <rect>
+     <x>496</x>
+     <y>110</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_7">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>140</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_8">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>140</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_7">
+   <property name="geometry">
+    <rect>
+     <x>496</x>
+     <y>140</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_6">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>140</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_7">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>140</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_8">
+   <property name="geometry">
+    <rect>
+     <x>686</x>
+     <y>140</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_6">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>140</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_5">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>140</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_8">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>140</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_5">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>140</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_6">
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>140</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_6">
+   <property name="geometry">
+    <rect>
+     <x>306</x>
+     <y>140</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_7">
+   <property name="geometry">
+    <rect>
+     <x>526</x>
+     <y>140</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_5">
+   <property name="geometry">
+    <rect>
+     <x>116</x>
+     <y>140</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_8">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>140</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_11">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>170</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_13">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_13">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>200</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_16">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>200</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_9">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>170</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_15">
+   <property name="geometry">
+    <rect>
+     <x>496</x>
+     <y>200</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_14">
+   <property name="geometry">
+    <rect>
+     <x>306</x>
+     <y>200</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_11">
+   <property name="geometry">
+    <rect>
+     <x>496</x>
+     <y>170</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_10">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>170</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_9">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_10">
+   <property name="geometry">
+    <rect>
+     <x>306</x>
+     <y>170</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_13">
+   <property name="geometry">
+    <rect>
+     <x>116</x>
+     <y>200</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_11">
+   <property name="geometry">
+    <rect>
+     <x>526</x>
+     <y>170</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_9">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>170</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_10">
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>170</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_15">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>200</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_15">
+   <property name="geometry">
+    <rect>
+     <x>526</x>
+     <y>200</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_12">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>170</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_9">
+   <property name="geometry">
+    <rect>
+     <x>116</x>
+     <y>170</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_16">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>200</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_15">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>200</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_12">
+   <property name="geometry">
+    <rect>
+     <x>686</x>
+     <y>170</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_14">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>200</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_14">
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>200</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_11">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>170</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_14">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>200</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_13">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>200</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_16">
+   <property name="geometry">
+    <rect>
+     <x>686</x>
+     <y>200</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_12">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>170</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_12">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>170</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_16">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>200</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_10">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>170</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_19">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>230</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_21">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>260</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_21">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>260</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_24">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>260</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_17">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>230</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_23">
+   <property name="geometry">
+    <rect>
+     <x>496</x>
+     <y>260</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_22">
+   <property name="geometry">
+    <rect>
+     <x>306</x>
+     <y>260</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_19">
+   <property name="geometry">
+    <rect>
+     <x>496</x>
+     <y>230</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_18">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>230</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_17">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>230</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_18">
+   <property name="geometry">
+    <rect>
+     <x>306</x>
+     <y>230</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_21">
+   <property name="geometry">
+    <rect>
+     <x>116</x>
+     <y>260</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_19">
+   <property name="geometry">
+    <rect>
+     <x>526</x>
+     <y>230</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_17">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>230</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_18">
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>230</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_23">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>260</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_23">
+   <property name="geometry">
+    <rect>
+     <x>526</x>
+     <y>260</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_20">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>230</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_17">
+   <property name="geometry">
+    <rect>
+     <x>116</x>
+     <y>230</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_24">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>260</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_23">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>260</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_20">
+   <property name="geometry">
+    <rect>
+     <x>686</x>
+     <y>230</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_22">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>260</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_22">
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>260</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_19">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>230</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_22">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>260</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_21">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>260</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_24">
+   <property name="geometry">
+    <rect>
+     <x>686</x>
+     <y>260</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_20">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>230</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_20">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>230</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_24">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>260</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_18">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>230</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pre_page">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>340</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_next_page">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>340</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_return_back">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>340</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_m">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_m">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>80</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_m">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>80</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_batch_change">
+   <property name="geometry">
+    <rect>
+     <x>586</x>
+     <y>80</y>
+     <width>131</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>批量设置</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_batch_set">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>80</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确认</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_help">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>10</y>
+     <width>341</width>
+     <height>61</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_25">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>290</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_25">
+   <property name="geometry">
+    <rect>
+     <x>116</x>
+     <y>290</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_26">
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>290</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_25">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_26">
+   <property name="geometry">
+    <rect>
+     <x>306</x>
+     <y>290</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_27">
+   <property name="geometry">
+    <rect>
+     <x>526</x>
+     <y>290</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_26">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>290</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_25">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>290</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_27">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>290</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_27">
+   <property name="geometry">
+    <rect>
+     <x>496</x>
+     <y>290</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_26">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>290</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_28">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>290</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_28">
+   <property name="geometry">
+    <rect>
+     <x>686</x>
+     <y>290</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_28">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>290</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_27">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>290</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_28">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>290</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_29">
+   <property name="geometry">
+    <rect>
+     <x>116</x>
+     <y>320</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_29">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>320</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_29">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>320</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_29">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>320</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_save_w_30">
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>320</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="CMyQLineEdit" name="lineEdit_w_30">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>320</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CMyQPushButton" name="pushButton_l_w_30">
+   <property name="geometry">
+    <rect>
+     <x>306</x>
+     <y>320</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_w_30">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>320</y>
+     <width>35</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A24</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CMyQPushButton</class>
+   <extends>QPushButton</extends>
+   <header>keyboard/myqpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CMyQLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>keyboard/myqlineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CUserGroupDialog</class>
+ <widget class="QDialog" name="CUserGroupDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>788</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>730</width>
+     <height>320</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_add">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>340</y>
+     <width>98</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>增加用户</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_delete">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>340</y>
+     <width>98</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除用户</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pre_list">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>50</y>
+     <width>31</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_next_list">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>170</y>
+     <width>31</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_cancle">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>340</y>
+     <width>98</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ok">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>340</y>
+     <width>98</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CWarnSetDialog</class>
+ <widget class="QDialog" name="CWarnSetDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>788</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="widget_help" native="true">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>10</y>
+     <width>651</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>40</y>
+      <width>101</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;报警使能关闭&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>441</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;点击保存按钮选择将报警阀值及使能状态存入系统&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>10</y>
+      <width>101</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;报警使能打开&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>101</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>帮助:点击</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>10</y>
+      <width>261</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;按钮选择报警是否使能&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_help_light">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_help_light_on">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>10</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_help_light_off">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>40</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_body" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>771</width>
+     <height>253</height>
+    </rect>
+   </property>
+   <widget class="CMyQPushButton" name="pushButton_i_harm_percent_light">
+    <property name="geometry">
+     <rect>
+      <x>686</x>
+      <y>160</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_down2_light">
+    <property name="geometry">
+     <rect>
+      <x>686</x>
+      <y>10</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>10</y>
+      <width>145</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>电流下下限报警阀值:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_47">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>170</y>
+      <width>16</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_i_zero_up">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>160</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_u_up_light">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>40</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>652</x>
+      <y>40</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_u_harm_percent_up_light">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>220</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_44">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>130</y>
+      <width>131</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;熔断器报警使能:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_i_harm_percent">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>160</y>
+      <width>40</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>40</y>
+      <width>145</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;电流上上限报警阀值:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_zero_up_save">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>160</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_27">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>100</y>
+      <width>145</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;频率下限报警阀值:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_lose_phase_save">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>130</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>130</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>V</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_25">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>171</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;电流下限报警阀值:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_50">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>220</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>%</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_up2_light">
+    <property name="geometry">
+     <rect>
+      <x>686</x>
+      <y>40</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_f_up">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>70</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_29">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>100</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_u_down_light">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>10</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_up_save">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>100</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_f_down_save">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>100</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_35">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>171</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;零地电流上限报警阀值:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_i_down2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>10</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_fuse_light">
+    <property name="geometry">
+     <rect>
+      <x>686</x>
+      <y>130</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_zero_up_light">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>160</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_31">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>171</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;电流上限报警阀值:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_f_down">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>100</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_36">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>160</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_up_light">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>100</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>10</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>V</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_lose_phase_light">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>130</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>171</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;电压上限报警阀值:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_26">
+    <property name="geometry">
+     <rect>
+      <x>652</x>
+      <y>70</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hz</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_48">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>160</y>
+      <width>215</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;电流谐波百分比上限报警阀值:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_i_unbalance_up">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>190</y>
+      <width>60</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_fuse_save">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>130</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_f_up_save">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>70</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_u_harm_percent_up">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>220</y>
+      <width>60</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_u_down_save">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>10</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_32">
+    <property name="geometry">
+     <rect>
+      <x>652</x>
+      <y>100</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hz</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_down_save">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>70</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>171</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>电压下限报警阀值:</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_lose_phase">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>130</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_down2_save">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>10</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_down_light">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>70</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_39">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>190</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_u_up">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>40</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_f_down_light">
+    <property name="geometry">
+     <rect>
+      <x>686</x>
+      <y>100</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_unbalance_up_light">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>190</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_49">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>211</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;电压谐波百分比上限报警阀值:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_unbalance_up_save">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>190</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>70</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_i_down">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>70</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_u_harm_percent_up_save">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>220</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_u_down">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>70</y>
+      <width>145</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;频率上限报警阀值:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_i_up">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>100</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_i_up2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>40</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_u_up_save">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>40</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_f_up_light">
+    <property name="geometry">
+     <rect>
+      <x>686</x>
+      <y>70</y>
+      <width>31</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>652</x>
+      <y>10</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>40</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>V</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_40">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>211</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;电流不平衡上限报警阀值:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_up2_save">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>40</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="CMyQPushButton" name="pushButton_i_harm_percent_save">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>160</y>
+      <width>41</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>171</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>缺相报警阀值:</string>
+    </property>
+   </widget>
+   <widget class="CMyQLineEdit" name="lineEdit_fuse">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>130</y>
+      <width>100</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_51">
+    <property name="geometry">
+     <rect>
+      <x>652</x>
+      <y>160</y>
+      <width>16</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>%</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pre_page">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>350</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_next_page">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>350</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_return_back">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>350</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CMyQPushButton</class>
+   <extends>QPushButton</extends>
+   <header>keyboard/myqpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CMyQLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>keyboard/myqlineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
