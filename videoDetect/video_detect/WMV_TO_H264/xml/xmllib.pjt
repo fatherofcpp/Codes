@@ -1,0 +1,31 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="E:\DM6446\HOST-DM642\xml\"
+ProjectType=Library
+CPUFamily=TMS320C64XX
+Tool="Archiver"
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="src\hash.c"
+Source="src\utils.c"
+Source="src\xmlnode.c"
+Source="src\xmlparse.c"
+
+["Archiver" Settings: "Debug"]
+Options=-r -o.\Debug\xmllib.lib
+
+["Archiver" Settings: "Release"]
+Options=-r -o.\Release\xmllib.lib
+
+["Compiler" Settings: "Debug"]
+Options=-g -fr"$(Proj_dir)\Debug" -i"$(Proj_dir)\..\include" -d"_DEBUG" -d"__linux" -d"__GNUC__" -d"__arm" -mv6400
+
+["Compiler" Settings: "Release"]
+Options=-o3 -fr"$(Proj_dir)\Release" -mv6400
+

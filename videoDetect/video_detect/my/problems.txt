@@ -1,0 +1,249 @@
+1.淮安服务器视频质量检测cpu 使用率高
+myvideo
+{return;}
+只拉流不检测
+2.本机正常运行的videodetect,在苏州服务器运行一段时间推出
+parseTask打印信息:
+starTim[32];
+CString p_H264Stream->StaTim;//"2013-12-11 14:17:12"
+memcpy(starTim,p_H264Stream->StaTim,32);
+//change to 
+memcpy(starTim,p_H264Stream->StaTim,p_H264Stream->StaTim.GetLength());
+代码移植可能存在优化问题
+3.
+http://10.20.90.242:8080/TN3:[parTask]:DeletePic return -1
+每三段时间保村图片时，由于周期设置过短<15,而判断文件是否存在的函数有*延时*，导致三段时间有部分段没保存图片
+0324-1.
+m_Frame=NULL;
+p_H264Stream->m_streamlock.Lock();
+if (p_H264Stream->p_Array.GetSize()>0)
+{
+	m_Frame=p_H264Stream->p_Array.ElementAt(0);
+	p_H264Stream->p_Array.RemoveAt(0);
+}
+p_H264Stream->m_streamlock.Unlock();
+//end get data from p_Array
+if (m_Frame!=NULL)
+{
+}
+是否会出现检测过程视频由在线变为不在线，若出现则阻塞;
+该情况不需要考虑因为在服务器状态检测线程里，循环监测视频是否在线，若不在线则，发出结束三个线程的命令
+0324-2.
+16路检测异常时不易定位改为1路测试
+0325-1.
+change server state tcp-connect from normal(block) to none-block
+
+0325-2.
+TRACE("[parseTask]:resOldTim:%d,resTestOldTim:%d,Updata:%d,coeInd:%d\n",resOldTim,resTestOldTim,Updata,coeInd);
+only Updata==1;else ==0 ;
+and m_Frame frequently ==null;
+原因:部分在线的视频无法观看，解决办法：在发送线程加判断条件，如果超过检测周期无发送数据则结束相关线程
+0325-3.
+多线程：1.线程运行状态打印2.线程退出打印3.线程异常阻塞的退出
+0325-4.
+multiThread:
+exit before CheckUrlOnline  == exit suE_JB098 before recHttpBody
+maybe:
+	HttpData=(char*)malloc(dataLen+1);//did not init
+	ret=strstr(pBuf,serch); 
+so add:
+	memset(HttpData,0,sizeof(dataLen+1));
+0326-1.
+add mutexLock before close stream
+in multiThread,if more threads execute close(m_a)(m_a is shared member),must add mutexlock,but m_a=1 do not must add lock;
+0326-2.
+	if(HttpData)
+		free(HttpData);
+0327-1.
+之前每次读取配置文件都new16路对象，会内存泄露
+改为仅第一次new16路对象，以后如构造函数一样reset成员变量
+0327-2.
+todo:netTsk 考虑p_H264Stream->Istask
+0328-1.
+typedef struct 
+{
+	char DiuShi[16]; 
+	char ZheDang[16]; 
+	char DuiJiao[16]; 
+	char LiangDu[16]; 
+	char DongJie[16]; 
+	char XueHua[16]; 
+	char ShanShuo[16]; 
+	char GunWen[16];
+
+	char CmdId[64];
+	char SrvIP[64];
+	char SrvPort[16];
+	char StreamName[64];
+	char StreamProtocol[64];
+}_YiChang;//information of post 
+old code memset each member but ignore to memset of GunWen new added
+so change to:
+	memset(&YCH,0,sizeof(YCH));
+0331-1.
+add StreamOffCmdId,StreamOffStpTim,StreamOffStaTim
+0331-2.when exception use resetAll to reset once instead of reset every time 
+		if(1==resetAll)//err reset all
+		{
+			if (m_Frame!=NULL){
+				delete m_Frame;
+				m_Frame=NULL;
+			}
+			Updata=1;
+			resOldTim=1;
+			resTestOldTim=1;
+			coeInd=0;
+			memset(naParRes,0,sizeof(naParRes));
+			memset(fDetectRes,0,sizeof(fDetectRes));
+			memset(chDetRes,0,sizeof(chDetRes));
+			resetAll=0;
+		}
+0331-2.
+det=NextDetect(&Ind);
+add if(det!=1) before TRACE Ind
+0331-3.
+old:
+fdClient1=ConnectTCP(Ip,port1);
+if(fdClient1<0){//server off -2
+	NetClose(fdClient1);
+	return -2;
+}
+problem:in ConnectTCP if return -1 fdClient1 has been closed
+new:
+fdClient1=ConnectTCP(Ip,port1);
+if(fdClient1<0){//server off -2
+      //NetClose(fdClient1);
+	return -2;
+}
+0401-1.
+in a function,when declare quantity,sort in types below:
+//pointer
+//constant
+//variable
+0401-2.
+add mutex when
+SenLog.InitLog();
+SenLog.Add();
+0401-3.
+memset(&m_MicrovideoParams,0,sizeof(m_MicrovideoParams));
+determined to memset struct with CString member,but cannot do this,it will broke CString 
+0401-4.
+if continue malloc(),will program exit?
+0401-5.
+catch exception when read config,parsetsk,sentsk,serverstatetsk
+try
+{}
+catch (CMemoryException* e)
+{
+}
+catch (CFileException* e)
+{
+}
+catch (CException* e)
+{
+}
+0402-1.
+put close video stream to leave flag to avoid break without close video stream
+p_H264Stream->m_streamcloselock.Lock();
+if (NULL!=p_H264Stream->h_stream)
+{
+	ProcessClose(p_H264Stream->h_stream);
+	p_H264Stream->h_stream=NULL;
+}
+p_H264Stream->m_streamcloselock.Unlock();
+0402-2.
+test onlyParseTsk
+0402-3.
+considering when get source number from config less than MaxLocTsk
+int NextDetect(int*ind)
+{
+//for(i=0;i<MaxLocTsk;i++)
+for(i=0;i<g_regDetWay;i++)
+{}
+}
+0402-4.
+in HuaiAn ,parseTsk and sendTsk and serverstateTsk thread detected p_H264Stream->TaskEnd==1 and break and goto leave flag,but didnot TRACE before while,so maybe it was due to 
+p_H264Stream->m_streamcloselock.Lock();
+if (NULL!=p_H264Stream->h_stream)
+{
+	ProcessClose(p_H264Stream->h_stream);
+	p_H264Stream->h_stream=NULL;
+}
+p_H264Stream->m_streamcloselock.Unlock();
+0403-1.
+old:
+int CH264Stream::StartPush(int Width, int Height)
+{
+	unsigned int threadid;
+
+	m_hParseThread=(HANDLE)_beginthreadex(NULL,0,parseTask,(void *)this,CREATE_SUSPENDED,&threadid);
+	SetThreadPriority(m_hParseThread, THREAD_PRIORITY_ABOVE_NORMAL);
+	ResumeThread(m_hParseThread);
+
+	m_hSendThread=(HANDLE)_beginthreadex(NULL,0,sendTask,(void *)this,CREATE_SUSPENDED,&threadid);
+	SetThreadPriority(m_hSendThread, THREAD_PRIORITY_ABOVE_NORMAL);
+	ResumeThread(m_hSendThread);
+
+	m_hSerStateThread=(HANDLE)_beginthreadex(NULL,0,serverState,(void *)this,CREATE_SUSPENDED,&threadid);
+	SetThreadPriority(m_hSerStateThread, THREAD_PRIORITY_ABOVE_NORMAL);
+	ResumeThread(m_hSerStateThread);
+	
+	return 0;
+}
+when to change video stream to detect ,we close three thread by myself,and create three 
+thread again,but we cannot ensure that three thread closed by myself is totally 
+closed.
+so we just SetParams and StartPull new video stream without close thread.
+0404-1.
+TRACE("[parseTsk]:%s is running\n",(int)TaskEnd);
+pragram not err,but when TaskEnd==0,broken.
+to find this:
+find err function in stack calling,and find array with the pointer which is params in err function 
+0404-2.
+didnot TRACE in parseTsk,so just run parseTsk but it occurs again
+we find:unexpected break in parseTsk,we use thread windows to find parseTsk unexpected ended in some time.
+0408-1.
+HuaiAn:test two video,three threads all sleeping ,but cycledetect not run,blocking.
+SuZhou:only parse video run 16 videos,and use debug model,but exit unexpectedly.
+0408-2:
+1.we thought resetAll only set 1 when err,but when  detected one cycle ,it should be set 1 also.
+2.forget resetAll=1 after  certain time do not get video data
+3.when resetAll==1,forget to updata oldTime and newTime.
+0409-1.
+1.run in Debug model in local PC for some time ,broken show Silicon.dll cause it. 
+HuaiAn:test two video,three threads all sleeping ,but cycledetect not run,blocking.
+SuZhou:only parse video run 16 videos,and use debug model,but exit unexpectedly.
+We should have ignored codes which init video detect using Silicon.dll.
+0409-2.
+SuZhou:only parse video run 16 videos,and use debug model,but exit unexpectedly before StartPull ,running time is about four hours.
+0409-3.
+drwtsn32
+0414-1.
+from 4-11-10:00:00 to now runs successfully in SuZhou:
+No http,no cycledetect,no parseTsk,sendTsk,serverStateTsk,myvideo just return.Only regular 16 video pull using 0409 MulDll.
+0414-2.
+UMDH的使用方法
+0414-3.
+in ReadVideoCon,add close H_stream before repull;We close video in par,sen,ser threads before,but now we donot close thread,so we forget to close video before new video pulling.
+We thought ProcessDll err because we use it unright.And it most because there is close video in StartPull.
+if(mHstream!=NULL)
+close(mHstream);//cannot forget it
+setParams();
+StartPull();//even there is close(mHstream) in this function to avoid exception. 
+0418-1.
+cycle pull video in company runs well.
+cycle pull video in SuZhou exit.
+pull  certain 16 video in SuZhou exit after 40 hours.
+company video :service always online,if video off send noLiveStream video.
+SuZhou:service may be off,if video off may not send any video. 
+0505-1.
+Timer,exit,Blrun.
+0505-2.
+视频质量检测正确率，误报率
+0618-1.
+120秒检测周期到175路会意外退出,历时24分钟左右。
+该为12秒检测周期，能检测232路视频。
+
+0829-1.
+1.改为逐帧检测
+2.改用实际检测帧数代替25

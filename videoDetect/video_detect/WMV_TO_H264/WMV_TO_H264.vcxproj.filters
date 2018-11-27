@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xml\src\bufobj.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CriticalSection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="H264Stream.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\src\hash.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="kmp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MicrovideoDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="netapi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJ.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleResize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\src\utils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WMV_TO_H264.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WMV_TO_H264Dlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\src\xmlnode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\src\xmlparse.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xml\include\_xr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\include\bufobj.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\include\c_defs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CriticalSection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cudevocxctrl1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="evbuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="H264Stream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\include\hash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IntSiVa_Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="kmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\include\massert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="microvideo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MicrovideoDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\include\mmem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\include\mty.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="netapi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJ.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="public_for_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rtmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rtmppacket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="safe_defs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleResize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\include\utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WMV_TO_H264.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WMV_TO_H264Dlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\include\xmlnode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\include\xmlparse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\include\xr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="YUVTOBMP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Silicon.lib">
+      <Filter>资源文件</Filter>
+    </Library>
+    <Library Include="libevent-2.0.21-stable\libevent.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\WMV_TO_H264.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\WMV_TO_H264.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WMV_TO_H264.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,52 @@
+1.
+淮安服务器视频质量检测4路时cpu 使用率过高，而同样4路在苏州服务器上检测cpu使用率很低，不执行视频质量检测，仅执行拉流操作，发现cpu使用率同样很高。
+2.
+测试阶段发现删除照片失败，经测试发现是保存图片失败的原因；
+http://10.20.90.242:8080/TN3:[parTask]:DeletePic return -1
+测试阶段每三段时间保寸图片时，由于检测周期设置过短（3秒），而实际运行的周期是120秒,而判断文件是否存在的函数需要一定时间，导致三段时间有部分段没保存图片
+3.
+检测过程视频由在线变为不在线，检测线程出现则阻塞;
+在服务器状态检测线程里，循环监测视频是否在线，若不在线则，发出结束三个线程的命令
+4.
+有部分视频列表在线，且网页在线的视频在检测过程中发现没有视频数据传入；
+在发送线程加判断条件，如果超过检测周期无发送数据则结束相关线程
+5.
+由之前每次读取配置文件都new16路对象，
+改为仅第一次new16路对象，以后如构造函数一样重置成员变量
+===========================
+淮安视频质量检测:
+程序运行一段时间，会出现循环切换视频的线程阻塞的现象，此时登录淮安服务器，发现服务器在线，且部分视频列表也在线，但是无法观看。这一现象反映之后，服务器端做了修改已经正常。现在淮安视频质量检测正常运行。
+苏州视频质量检测：
+当视频流地址为公司视频，程序正常运行不会奔溃。而当视频流地址为苏州视频流地址，程序运行一段时间(一般8小时左右)奔溃，针对这一现象，在程序中屏蔽其他代码，只进行16路拉流，切换，程序运行20小时左右意外退出；后改为只拉16路但不执行切换操作，程序在40小时左右之后意外退出，因为苏州与淮安的视频质量检测代码完全相同，所以初步怀疑是MutiProcess.dll库的问题；
+因此重新写了简单的对话框程序，只用到MultiProcess.dll库进行拉流，固定拉取16路视频，程序并没有意外退出；但是循环切换16路视频时，运行20小时左右，程序意外退出，据堆栈跟踪到的代码显示， MultiProcess.dll里一个指针被意外修改，导致其指向不可读的空间。
+
+
+three theads running doing nothing,using 0409 MulDll,but exit.
+No http,no cycledetect,no parseTsk,sendTsk,serverStateTsk,myvideo just return.Only regular 16 video pull using 0409 MulDll this works well.
+
+add close before setParam ,exit.
+
+There is something wrong in cycledetect,this time ignore TRACE in cycledetect.but exit.
+
+no cycledetect ,other runs normally.but exit after about 40 hours.
+
+cycle pull video in online service,but exit.
+
+pull certain 16 video.Source0=http://10.20.86.200:8080/CD5;but exit after 1 hour.
+
+pull just 1 video.Source0=http://10.20.86.200:8080/CD5; 0418-1801 runs normally within 2.5 days.
+
+
+------
+No parTsk,sendTsk,serverStateTsk,no http,myvideo just return,
+just use cycledetect to cyclely pull 16 video using 0409 MulDll , but exit.
+
+No cycledetect,regularly detect 16 video run well.
+
+There is something wrong in cycledetect,
+use array instead of ReadVideoConf each time,and sleep sometime after close video,but exit.
+
+StartPull just return.Other run normally.it runs normal within 4.5days.
+4M
+
+serStateEnd donot end parsTsk,Normally runs,MaxLocTsk=2,0425-1553 60M

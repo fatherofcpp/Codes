@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{3c2d7917-103d-475b-b542-8b2750318806}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business">
+      <UniqueIdentifier>{d4011bc5-186b-473c-ac28-2e53400f3b91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\WatchDogProgress.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\WatchDogProgress.ico">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WatchDogProgress.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WatchDogProgressDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SourceCode\Utility\CmFunction\CmDefStruct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SourceCode\Utility\CmFunction\CmDefType.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SourceCode\Utility\CmFunction\CmFunction.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SourceCode\Utility\Log\CmLog.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SourceCode\Utility\Socket\CmAbstractTransf.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SourceCode\Utility\Socket\CmTransUdp.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SourceCode\Utility\Thread\CmThread.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\SourceCode\Utility\Thread\CmThreadPool.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\MainTsk.h">
+      <Filter>Business</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WatchDogProgress.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WatchDogProgressDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SourceCode\Utility\CmFunction\CmFunction.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SourceCode\Utility\Log\CmLog.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SourceCode\Utility\Socket\CmAbstractTransf.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SourceCode\Utility\Socket\CmTransUdp.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SourceCode\Utility\Thread\CmThread.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\SourceCode\Utility\Thread\CmThreadPool.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\MainTsk.cpp">
+      <Filter>Business</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WatchDogProgress.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

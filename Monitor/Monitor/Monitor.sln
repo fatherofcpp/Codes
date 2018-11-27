@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Monitor", "Monitor.vcxproj", "{BCB40B08-7FCF-4A21-BD45-D77FAA43DC8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCB40B08-7FCF-4A21-BD45-D77FAA43DC8D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BCB40B08-7FCF-4A21-BD45-D77FAA43DC8D}.Debug|Win32.Build.0 = Debug|Win32
+		{BCB40B08-7FCF-4A21-BD45-D77FAA43DC8D}.Release|Win32.ActiveCfg = Release|Win32
+		{BCB40B08-7FCF-4A21-BD45-D77FAA43DC8D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,40 @@
+linux:
+1.
+将本地home目录下的test.tar的文件拷贝到远程主机192.168.1.23的/home/adm/目录下，则命令为：
+scp -r /home/test.tar root@192.168.1.23:/home/adm/ 
+ -r 拷贝整个目录 
+2.
+网关：
+route add default gw 192.168.0.254
+重启http:
+service httpd start
+3.
+后台运行：
+	1.nohup command &
+ (./gpsNJ -f /etc/mes_ext.xml -p 9876 >gps.log 2>&1 &)
+	2.top或ps查看进程
+	3.killall
+4.查看linux版本
+lsb_release -a
+5.vim
+gd     跳至当前光标所在的变量的声明处
+H     移动光标到当前屏幕上最上边的一行
+M     移动光标到当前屏幕上中间的一行
+L     移动光标到当前屏幕上最下边的一行
+
+shift+* 查看函数定义，此时函数在本文件中；若函数不在本文件中，
+使用 grep ConnectTCP -r ./*查看函数
+
+
+windows:
+1.
+cmd
+ipconfig /flushdns
+2.
+vs:
+add lib:
+工具-选项->链接器->输入
+添加文件夹：
+工具-选项->c/c++->常规
+vs:
+cstring 转 char*时使用多字节字符集
