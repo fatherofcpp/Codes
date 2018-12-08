@@ -4,8 +4,8 @@
 #include "ijl/Cmijlutil.h"
 #include <algorithm>
 
-M_BOOL NSP_STP_CM::frame_convert(M_IN MCU_CHAR* input_data, M_IN MCS_INT32 input_len, M_IN MCS_INT32 input_width, M_IN MCS_INT32 input_height, M_IN MCS_INT32 input_type,
-	M_OUT MU_CHAR** pp_output, M_OUT MS_INT32* p_output_len, M_IN MCS_INT32 output_width, M_IN MCS_INT32 output_height, M_IN MCS_INT32 output_type)
+M_BOOL NSP_STP_CM::frame_convert(M_IN MCU_CHAR* input_data, M_IN MCS_INT32 input_len, M_IN MCS_INT32 /*input_width*/, M_IN MCS_INT32 /*input_height*/, M_IN MCS_INT32 /*input_type*/,
+	M_OUT MU_CHAR** pp_output, M_OUT MS_INT32* p_output_len, M_IN MCS_INT32 /*output_width*/, M_IN MCS_INT32 /*output_height*/, M_IN MCS_INT32 /*output_type*/)
 {
 	if (!pp_output)
 	{
@@ -60,7 +60,8 @@ MS_INT32 NSP_STP_CM::file_write(M_STRING file_path, MCU_CHAR* file_data, MU_INT3
 	pf = fopen(file_path.c_str(), "wb");
 	if(pf)
 	{
-		M_SIZE_T w_rt = fwrite(file_data, sizeof(char), file_len, pf);
+		//M_SIZE_T w_rt = 
+			fwrite(file_data, sizeof(char), file_len, pf);
 		fclose(pf);		
 	}
 	else
@@ -80,7 +81,7 @@ MS_INT32 NSP_STP_CM::filetitle_list_in_folder(M_STRING folder_path, std::vector<
 	CFileFind finder;  
 	M_STRING path = folder_path + "\\*.*";
 	CString cs_file_name;
-	BOOL is_suc = FALSE;
+//	BOOL is_suc = FALSE;
 	BOOL b_working = finder.FindFile(A2W(path.c_str()));  
 	while(b_working)
 	{  
@@ -315,7 +316,7 @@ MS_INT32 NSP_STP_CM::folderpath_list_in_folder(M_STRING folder_path, std::vector
 	CFileFind finder;  
 	M_STRING path = folder_path + "\\*.*";
 	CString cs_file_name;
-	BOOL is_suc = FALSE;
+//	BOOL is_suc = FALSE;
 	BOOL b_working = finder.FindFile(A2W(path.c_str()));  
 	while(b_working)
 	{  
@@ -346,7 +347,7 @@ MS_INT32 NSP_STP_CM::foldertitle_list_in_folder(M_STRING folder_path, std::vecto
 	CFileFind finder;  
 	M_STRING path = folder_path + "\\*.*";
 	CString cs_file_name;
-	BOOL is_suc = FALSE;
+//	BOOL is_suc = FALSE;
 	BOOL b_working = finder.FindFile(A2W(path.c_str()));  
 	while(b_working)
 	{  
@@ -372,7 +373,7 @@ MS_INT32 NSP_STP_CM::file_len(M_STRING file_path)
 {
 	FILE *pf = NULL;
 	MS_INT32 len = 0;
-	MS_INT32 rtn = 0;
+//	MS_INT32 rtn = 0;
 
 	pf = fopen(file_path.c_str(), "rb");
 	if(pf)
@@ -520,7 +521,7 @@ M_VOID NSP_STP_CM::Dec2Hex(BYTE* pDst, MS_INT32 length, MS_INT32 Val)
 {
 	for(MS_INT32 i = 0; i < length; i ++)
 	{
-		*pDst = Val >> (8*(length-1-i));
+		*pDst = (Val >> (8*(length-1-i))) & 0xFF;
 		pDst++;
 	}	
 }
@@ -540,7 +541,7 @@ M_STRING NSP_STP_CM::str_match_tail2sig_last( M_STRING str_input, M_STRING tag ,
 {
 	M_STRING tmp = str_input;
 	MS_INT32 find_it = 0;
-	MS_INT32 tail_len = 0;
+	MU_INT32 tail_len = 0;
 	while(1)
 	{
 		find_it = tmp.find(tag);
@@ -668,16 +669,16 @@ static time_t SystemTimeToTime_t(const SYSTEMTIME& st)
 
 M_BOOL NSP_STP_CM::set_local_time(tag_st_time s_time)
 {
-	MS_INT32 ret = 0;
+//	MS_INT32 ret = 0;
 	SYSTEMTIME		SysTime;
 	SYSTEMTIME		GetTime;
 	memset(&GetTime, 0x00, sizeof(GetTime));
-	GetTime.wYear = s_time.year;
-	GetTime.wMonth = s_time.mon;
-	GetTime.wDay = s_time.day;
-	GetTime.wHour = s_time.hour;
-	GetTime.wMinute = s_time.min;
-	GetTime.wSecond = s_time.sec;
+	GetTime.wYear = static_cast<WORD>(s_time.year);
+	GetTime.wMonth = static_cast<WORD>(s_time.mon);
+	GetTime.wDay = static_cast<WORD>(s_time.day);
+	GetTime.wHour = static_cast<WORD>(s_time.hour);
+	GetTime.wMinute = static_cast<WORD>(s_time.min);
+	GetTime.wSecond = static_cast<WORD>(s_time.sec);
 
 	GetLocalTime(&SysTime);
 
@@ -818,7 +819,7 @@ M_BOOL NSP_STP_CM::MyGetDiskFreeSpaceEx(LPCSTR pszDrive, MU_INT32& total_g, MU_I
 	return (fResult == TRUE);
 }
 
-MS_INT32 NSP_STP_CM::SaveBmp(BYTE *buf, MS_INT32 width, MS_INT32 height, MS_INT32 iDataLen, BITMAPINFO * pBitmapInfo, M_STRING lpFileName)
+MS_INT32 NSP_STP_CM::SaveBmp(BYTE *buf, MS_INT32 width, MS_INT32 height, MS_INT32 iDataLen, BITMAPINFO * /*pBitmapInfo*/, M_STRING lpFileName)
 {
 	BITMAPFILEHEADER fileHeader;               /* bmp file header */
 	BITMAPINFOHEADER infoHeader;             /* bmp information header */
@@ -845,9 +846,9 @@ MS_INT32 NSP_STP_CM::SaveBmp(BYTE *buf, MS_INT32 width, MS_INT32 height, MS_INT3
 	infoHeader.biClrImportant = 0;
 
 	for (i = 0; i < 256; i++) {
-		rgb[i].rgbRed = i;
-		rgb[i].rgbGreen = i;
-		rgb[i].rgbBlue = i;
+		rgb[i].rgbRed = static_cast<BYTE>(i);
+		rgb[i].rgbGreen = static_cast<BYTE>(i);
+		rgb[i].rgbBlue = static_cast<BYTE>(i);
 		rgb[i].rgbReserved = 0;
 	}
 
@@ -963,9 +964,9 @@ int NSP_STP_CM::convert_yuv_to_rgb_pixel(int y, int u, int v)
 	if(r < 0) r = 0;
 	if(g < 0) g = 0;
 	if(b < 0) b = 0;
-	pixel[0] = r ;
-	pixel[1] = g ;
-	pixel[2] = b ;
+	pixel[0] = static_cast<unsigned char>(r);
+	pixel[1] = static_cast<unsigned char>(g) ;
+	pixel[2] = static_cast<unsigned char>(b) ;
 	return pixel32;
 }
 
@@ -990,16 +991,16 @@ int NSP_STP_CM::convert_yuv_to_rgb_buffer(unsigned char *yuv, unsigned char *rgb
 		y1 = (pixel_16 & 0x00ff0000) >> 16;
 		v  = (pixel_16 & 0xff000000) >> 24;
 		pixel32 = NSP_STP_CM::convert_yuv_to_rgb_pixel(y0, u, v);
-		pixel_24[0] = (pixel32 & 0x000000ff);
-		pixel_24[1] = (pixel32 & 0x0000ff00) >> 8;
-		pixel_24[2] = (pixel32 & 0x00ff0000) >> 16;
+		pixel_24[0] = static_cast<unsigned char>(pixel32 & 0x000000ff);
+		pixel_24[1] = static_cast<unsigned char>((pixel32 & 0x0000ff00) >> 8);
+		pixel_24[2] = static_cast<unsigned char>((pixel32 & 0x00ff0000) >> 16);
 		rgb[out++] = pixel_24[0];
 		rgb[out++] = pixel_24[1];
 		rgb[out++] = pixel_24[2];
 		pixel32 = NSP_STP_CM::convert_yuv_to_rgb_pixel(y1, u, v);
-		pixel_24[0] = (pixel32 & 0x000000ff);
-		pixel_24[1] = (pixel32 & 0x0000ff00) >> 8;
-		pixel_24[2] = (pixel32 & 0x00ff0000) >> 16;
+		pixel_24[0] = static_cast<unsigned char>(pixel32 & 0x000000ff);
+		pixel_24[1] = static_cast<unsigned char>((pixel32 & 0x0000ff00) >> 8);
+		pixel_24[2] = static_cast<unsigned char>((pixel32 & 0x00ff0000) >> 16);
 		rgb[out++] = pixel_24[0];
 		rgb[out++] = pixel_24[1];
 		rgb[out++] = pixel_24[2];
@@ -1070,7 +1071,7 @@ MS_INT32 NSP_STP_CM::TimeCompare(tag_st_time time_src, tag_st_time time_obj)
 MS_INT32 NSP_STP_CM::StringSplit( M_STRING src, std::vector<M_STRING>& vec_data, MS_CHAR sig )
 {
 	//"a,b,...,n"
-	MS_INT32 rtn = 0;
+//	MS_INT32 rtn = 0;
 	MS_INT32 pos = 0;
 	while(1)
 	{
@@ -1158,7 +1159,7 @@ MS_CHAR * NSP_STP_CM::strUpper( MS_CHAR * str )
 {
 	for (MU_INT32 i = 0; i < strlen(str); ++i)
 	{
-		str[i] = toupper(str[i]);
+		str[i] = static_cast<char>(toupper(str[i]));
 	}
 	return str;
 }
@@ -1167,7 +1168,7 @@ MS_CHAR * NSP_STP_CM::strLower( MS_CHAR * str )
 {
 	for (MU_INT32 i = 0; i < strlen(str); ++i)
 	{
-		str[i] = tolower(str[i]);
+		str[i] = static_cast<char>(tolower(str[i]));
 	}
 	return str;
 }

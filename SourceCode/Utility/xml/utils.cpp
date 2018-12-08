@@ -91,9 +91,9 @@ namespace NSP_STP_CM
 
 	static const MS_CHAR *hex = "0123456789ABCDEF";
 
-	static MS_INT32 ST_hex2bin(const MS_CHAR *M_RESTRICT src, void *const M_RESTRICT dst);
+	MS_INT32 ST_hex2bin(const MS_CHAR *M_RESTRICT src, void *const M_RESTRICT dst);
 
-	static MS_CHAR *ST_fskip_non_space(const MS_CHAR *M_RESTRICT str)
+	MS_CHAR *ST_fskip_non_space(const MS_CHAR *M_RESTRICT str)
 	{
 		while (*str != 0x00)
 		{
@@ -135,7 +135,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(str)));
 	}
 
-	static MS_CHAR *ST_bskip_space(const MS_CHAR *M_RESTRICT str)
+	MS_CHAR *ST_bskip_space(const MS_CHAR *M_RESTRICT str)
 	{
 		const MS_CHAR *last = NULL;
 
@@ -162,7 +162,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(last+1)));
 	}
 
-	static MS_CHAR *ST_fskip_char(const MS_CHAR *M_RESTRICT str, MS_CHAR ch)
+	MS_CHAR *ST_fskip_char(const MS_CHAR *M_RESTRICT str, MS_CHAR ch)
 	{
 		while (*str != 0x00)
 		{
@@ -179,7 +179,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(str)));
 	}
 
-	static MS_CHAR *ST_next_area(const MS_CHAR * M_RESTRICT src, MS_CHAR * M_RESTRICT dst, const MS_CHAR x)
+	MS_CHAR *ST_next_area(const MS_CHAR * M_RESTRICT src, MS_CHAR * M_RESTRICT dst, const MS_CHAR x)
 	{
 		MS_CHAR match = 0;
 
@@ -241,7 +241,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(src)));
 	}
 
-	static MS_INT32 ST_parse_kv(const MS_CHAR * M_RESTRICT src, MS_CHAR * M_RESTRICT key, MS_CHAR * M_RESTRICT value, const MS_CHAR x)
+	MS_INT32 ST_parse_kv(const MS_CHAR * M_RESTRICT src, MS_CHAR * M_RESTRICT key, MS_CHAR * M_RESTRICT value, const MS_CHAR x)
 	{
 		MS_CHAR *p;
 
@@ -262,7 +262,7 @@ namespace NSP_STP_CM
 		return (1);
 	}
 
-	static MU_INT32 ST_strulen(const MS_CHAR * M_RESTRICT str)
+	MU_INT32 ST_strulen(const MS_CHAR * M_RESTRICT str)
 	{
 		const MS_CHAR *s;
 
@@ -293,7 +293,7 @@ namespace NSP_STP_CM
 		return (0x7F);
 	}
 
-	static MS_INT32 ST_hex2color(const MS_CHAR *M_RESTRICT src, MU_INT32 *const M_RESTRICT dst)
+	MS_INT32 ST_hex2color(const MS_CHAR *M_RESTRICT src, MU_INT32 *const M_RESTRICT dst)
 	{
 		MS_CHAR buf[9];
 		MU_INT32 ulen;
@@ -316,7 +316,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	static MS_INT32 ST_hex2bin(const MS_CHAR *M_RESTRICT src, void *const M_RESTRICT dst)
+	MS_INT32 ST_hex2bin(const MS_CHAR *M_RESTRICT src, void *const M_RESTRICT dst)
 	{
 		MS_INT32 i;
 		MS_INT32 len;
@@ -351,7 +351,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	static MS_INT32 ST_hex2int(const MS_CHAR *M_RESTRICT src, MU_INT32 *const M_RESTRICT dst)
+	MS_INT32 ST_hex2int(const MS_CHAR *M_RESTRICT src, MU_INT32 *const M_RESTRICT dst)
 	{
 		MS_CHAR buf[9];
 		MU_INT32 ulen;
@@ -373,7 +373,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	static MS_INT32 ST_bin2hex(MS_CHAR * M_RESTRICT dst, const void *const src, MS_INT32 len)
+	MS_INT32 ST_bin2hex(MS_CHAR * M_RESTRICT dst, const void *const src, MS_INT32 len)
 	{
 		const MU_CHAR *_src = (MU_CHAR *)src;
 
@@ -387,7 +387,7 @@ namespace NSP_STP_CM
 		return (len<<1);
 	}
 
-	static MS_INT32 ST_itoa(MS_CHAR * M_RESTRICT dst, MS_INT32 num)
+	MS_INT32 ST_itoa(MS_CHAR * M_RESTRICT dst, MS_INT32 num)
 	{
 		MS_INT32 res;
 		MS_INT32 iv;
@@ -414,7 +414,7 @@ namespace NSP_STP_CM
 				res = num / iv;
 				if ((flag == 1) || (res > 0))
 				{
-					*dst++ = res + '0';
+					*dst++ = static_cast<MS_CHAR>(res) + '0';
 					len++;
 					flag = 1;
 				}
@@ -429,7 +429,7 @@ namespace NSP_STP_CM
 	/*
 	* 得到大于到一个x的最小的2^n, n = 32 - m
 	*/
-	static MU_INT32 ST_power2_ceil(MU_INT32 x)
+	MU_INT32 ST_power2_ceil(MU_INT32 x)
 	{
 		x--;
 		x |= x >> 1;
@@ -443,7 +443,7 @@ namespace NSP_STP_CM
 		return (x);
 	}
 
-	static MS_INT32 ST_parse_args(MS_CHAR *argp[], MS_CHAR *const cmd)
+	MS_INT32 ST_parse_args(MS_CHAR *argp[], MS_CHAR *const cmd)
 	{
 		MS_INT32 i = 0;
 		MS_CHAR *p = cmd;
@@ -468,7 +468,7 @@ namespace NSP_STP_CM
 		return (i);
 	}
 
-	static MS_INT32 ST_isalldigit(const MS_CHAR *M_RESTRICT buf, MS_INT32 siz)
+	MS_INT32 ST_isalldigit(const MS_CHAR *M_RESTRICT buf, MS_INT32 siz)
 	{
 		const MS_CHAR *save = buf;
 		const MS_CHAR *end = (siz <= 0) ? buf - 1 : buf + siz;
@@ -493,7 +493,7 @@ namespace NSP_STP_CM
 		return (buf - save);
 	}
 
-	static MS_INT32 ST_is_MU_INT32(const MS_CHAR *M_RESTRICT buf)
+	MS_INT32 ST_is_MU_INT32(const MS_CHAR *M_RESTRICT buf)
 	{
 		MS_INT32 len;
 		MS_INT64 t;
@@ -526,7 +526,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	static MS_INT32 ST_is_MS_INT32(const MS_CHAR *M_RESTRICT buf)
+	MS_INT32 ST_is_MS_INT32(const MS_CHAR *M_RESTRICT buf)
 	{
 		MS_INT32 len;
 		MS_INT64 t;
@@ -573,7 +573,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	static MS_INT32 ST_isdigit_enum(const MS_CHAR *M_RESTRICT buf)
+	MS_INT32 ST_isdigit_enum(const MS_CHAR *M_RESTRICT buf)
 	{
 		MS_INT32 ng = 1;
 
@@ -604,7 +604,7 @@ namespace NSP_STP_CM
 		}
 	}
 
-	static MS_INT32 ST_remove_dup(MS_CHAR *src, MS_CHAR c, M_BOOL remove_last)
+	MS_INT32 ST_remove_dup(MS_CHAR *src, MS_CHAR c, M_BOOL remove_last)
 	{
 		MS_INT32 len;
 		MS_CHAR *dst = src;
@@ -643,7 +643,7 @@ namespace NSP_STP_CM
 		return (len);
 	}
 
-	static MS_INT32 ST_isname(const MS_CHAR *M_RESTRICT _buf)
+	MS_INT32 ST_isname(const MS_CHAR *M_RESTRICT _buf)
 	{
 		const MU_CHAR *buf = (const MU_CHAR *)_buf;
 
@@ -680,7 +680,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	static MS_INT32 ST_is_asc_name(const MS_CHAR *M_RESTRICT buf)
+	MS_INT32 ST_is_asc_name(const MS_CHAR *M_RESTRICT buf)
 	{
 		for (; *buf != 0x00; buf++)
 		{
@@ -705,7 +705,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	static MS_INT32 ST_get_div(MU_INT32 src, MU_INT32 di)
+	MS_INT32 ST_get_div(MU_INT32 src, MU_INT32 di)
 	{
 		MU_INT32 rt;
 		MU_INT32 y;
@@ -753,7 +753,7 @@ namespace NSP_STP_CM
 		return (s - src - 1);	/* count does not include NUL */
 	}
 
-	static MS_INT32 ST_cvtchar(MS_CHAR *M_RESTRICT buf, MS_CHAR f, MS_CHAR t)
+	MS_INT32 ST_cvtchar(MS_CHAR *M_RESTRICT buf, MS_CHAR f, MS_CHAR t)
 	{
 		MS_INT32 c = 0;
 
@@ -769,7 +769,7 @@ namespace NSP_STP_CM
 		return (c);
 	}
 
-	static MS_INT32 ST_strto_upper(MS_CHAR *s)
+	MS_INT32 ST_strto_upper(MS_CHAR *s)
 	{
 		MS_INT32 c = 0;
 
@@ -785,7 +785,7 @@ namespace NSP_STP_CM
 		return (c);
 	}
 
-	static MS_INT32 ST_strto_lower(MS_CHAR *s)
+	MS_INT32 ST_strto_lower(MS_CHAR *s)
 	{
 		MS_INT32 c = 0;
 

@@ -78,7 +78,7 @@ void NSP_STP_CM::ClosePort(HANDLE handle)
 	}
 }
 
-BOOL NSP_STP_CM::Write(HANDLE m_portHandle, const unsigned char * chData_, unsigned int nSizeBuffer_, unsigned long &  nLength_ , OVERLAPPED *o )
+BOOL NSP_STP_CM::Write(HANDLE m_portHandle, const unsigned char * chData_, unsigned int nSizeBuffer_, unsigned long &  nLength_ , OVERLAPPED * /*o*/ )
 {
 	if(m_portHandle == NULL) return FALSE;
 	if (nSizeBuffer_ > 0)
@@ -97,7 +97,7 @@ BOOL NSP_STP_CM::Write(HANDLE m_portHandle, const unsigned char * chData_, unsig
 	return FALSE;
 }
 
-BOOL NSP_STP_CM::Read(HANDLE m_portHandle, unsigned char * chData_, unsigned int nSizeBuffer_, unsigned long&  nLength_, OVERLAPPED *o)
+BOOL NSP_STP_CM::Read(HANDLE m_portHandle, unsigned char * chData_, unsigned int nSizeBuffer_, unsigned long&  nLength_, OVERLAPPED * /*o*/)
 {
 	if (m_portHandle == NULL) return FALSE;
 	if (ReadFile(m_portHandle, // handle of file to read
@@ -156,7 +156,7 @@ int NSP_STP_CM::CSerial::OnSend(char* senBuff, int byte_to_write, int& byte_writ
 	DWORD dw_bytes_written;
 	BOOL res = WriteFile(m_hSerial, senBuff, byte_to_write, &dw_bytes_written, NULL);
 	byte_written = dw_bytes_written;
-	if(res == FALSE || dw_bytes_written != byte_to_write)
+	if(res == FALSE || dw_bytes_written != static_cast<DWORD>(byte_to_write))
 	{
 		return -1;
 	}
@@ -174,7 +174,7 @@ int NSP_STP_CM::CSerial::OnReceive( char* recvBuff, int byte_to_read, int& byte_
 	DWORD read_num;
 	BOOL res = ReadFile(m_hSerial, recvBuff, byte_to_read, &read_num, NULL); 
 	byte_read = read_num;
-	if(res == FALSE || read_num != byte_to_read)
+	if(res == FALSE || read_num != static_cast<DWORD>(byte_to_read))
 	{
 		return -1;
 	}
@@ -218,9 +218,9 @@ int NSP_STP_CM::CSerial::OpenSerial()
 		com_dcb.DCBlength = sizeof( com_dcb ) ;
 		GetCommState( m_hSerial, &com_dcb ) ; //获取当前参数
 		com_dcb.BaudRate = m_pStSerialOpt->baud; //波特率
-		com_dcb.StopBits = m_pStSerialOpt->stop; //停止位
-		com_dcb.ByteSize = m_pStSerialOpt->byte_size; //8数据位
-		com_dcb.Parity = m_pStSerialOpt->parity; /*0校验 0~4=no, odd, even, mark, space */
+		com_dcb.StopBits = static_cast<BYTE>(m_pStSerialOpt->stop); //停止位
+		com_dcb.ByteSize = static_cast<BYTE>(m_pStSerialOpt->byte_size); //8数据位
+		com_dcb.Parity = static_cast<BYTE>(m_pStSerialOpt->parity); /*0校验 0~4=no, odd, even, mark, space */
 		SetCommState(m_hSerial, &com_dcb ) ;//设置通讯参数
 		return 0;
 	} //设置新的通信参数

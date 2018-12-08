@@ -63,9 +63,13 @@ int NSP_STP_CM::CUdp::Send2Service(const char *p_data, int i_data)
 
 	sockaddr_in server;
 	memset(&server, 0, sizeof(server));
-	server.sin_family = m_family;
+#if(_WIN32_WINNT < 0x0600)
+	server.sin_family = static_cast<short>(m_family);
+#else
+	server.sin_family = static_cast<ADDRESS_FAMILY>(m_family);
+#endif
 	server.sin_addr.s_addr = inet_addr(m_serverIp) /* *((unsigned long*)hp->h_addr)*/;
-	server.sin_port = htons(m_serverPort);
+	server.sin_port = htons(static_cast<u_short>(m_serverPort));
 	int nlen = sizeof(server);
 
 	int ret =  sendto(m_sockFd, p_data, i_data, 0, (sockaddr*)&server, nlen);
@@ -78,9 +82,9 @@ int NSP_STP_CM::CUdp::RecvFrmService(char *p_data, int i_data)
 	fd_set fds_e;
 	int i_ret = 0;
 	FD_ZERO( &fds_r );
-	FD_SET( m_sockFd, &fds_r );
+	FD_SET( static_cast<unsigned int>(m_sockFd), &fds_r );
 	FD_ZERO( &fds_e );
-	FD_SET( m_sockFd, &fds_e );
+	FD_SET(  static_cast<unsigned int>(m_sockFd), &fds_e );
 
 	i_ret = select(m_sockFd + 1, &fds_r, NULL, &fds_e, &m_readTimeOut);
 
@@ -174,9 +178,13 @@ int NSP_STP_CM::CUdp::BindFrmServer()
 	int ret = 0;
 	sockaddr_in addr_svr; 
 	addr_svr.sin_addr.s_addr = htonl(INADDR_ANY);
-	addr_svr.sin_family = m_family;  
+#if(_WIN32_WINNT < 0x0600)
+	addr_svr.sin_family = static_cast<short>(m_family);
+#else
+	addr_svr.sin_family = static_cast<ADDRESS_FAMILY>(m_family);
+#endif
 	int port_svr = m_localPort;
-	addr_svr.sin_port = htons(port_svr);       
+	addr_svr.sin_port = htons(static_cast<u_short>(port_svr));
 
 	ret = bind(m_sockFd, (sockaddr*)&addr_svr, sizeof(sockaddr));   
 	if (ret != 0) 

@@ -115,7 +115,7 @@ int NSP_STP_CM::CMySqlDB::ReadDataBase(unsigned long long& row_count, unsigned i
 
 	MYSQL_ROW result_row = NULL;
 	int row_ind = 0;
-	while(result_row = mysql_fetch_row(res_ptr))
+	while(NULL != (result_row = mysql_fetch_row(res_ptr)))
 	{
 		for(unsigned int col_ind = 0; col_ind < col_count; col_ind++)
 		{

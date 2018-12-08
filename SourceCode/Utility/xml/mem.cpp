@@ -12,7 +12,7 @@
 using namespace NSP_STP_CM;
 
 
-void *NSP_STP_CM::MM_alloc(MU_INT32 size,MU_INT32 align)
+void *NSP_STP_CM::MM_alloc(MU_INT32 size,MU_INT32 /*align*/)
 {
 	return (void *)malloc(size);
 }
@@ -30,7 +30,7 @@ void *NSP_STP_CM::MM_calloc(MU_INT32 size,MS_INT8 value,MU_INT32 align)
 
 }
 
-void NSP_STP_CM::MM_free(void *addr,MU_INT32 size)
+void NSP_STP_CM::MM_free(void *addr,MU_INT32 /*size*/)
 {
 	if (addr != NULL)
 		free(addr);

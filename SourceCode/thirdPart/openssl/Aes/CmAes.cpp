@@ -62,6 +62,8 @@ int NSP_STP_CM::encry_aes(MU_INT8* input_data, MU_INT32 input_data_len)
 
 	return 0;  
 #else
+	input_data_len;
+	input_data;
 	return -1;
 #endif
 }
@@ -116,7 +118,8 @@ int NSP_STP_CM::decrypt_aes(MU_INT8* input_data, MU_INT32 input_data_len)
 
 	return 0;  
 #else
-
+	input_data_len;
+	input_data;
 	return -1;
 
 #endif

@@ -95,7 +95,7 @@ int NSP_STP_CM::CIJLUtil::DeCompressImg(BYTE **img, BYTE *shuju, int len, int * 
 	return jerr;
 }
 
-int NSP_STP_CM::CIJLUtil::Encode( DWORD dwWidth, DWORD dwHeight, LPVOID lpYUYVSrc, DWORD dwSrcLength, LPVOID lpJPEGDst, DWORD dwDstLength, LPDWORD lpJPEGSize,bool bColorCam)
+int NSP_STP_CM::CIJLUtil::Encode( DWORD dwWidth, DWORD dwHeight, LPVOID lpYUYVSrc, DWORD /*dwSrcLength*/, LPVOID lpJPEGDst, DWORD dwDstLength, LPDWORD lpJPEGSize,bool bColorCam)
 {
 	m_cvtLock.Lock();
 

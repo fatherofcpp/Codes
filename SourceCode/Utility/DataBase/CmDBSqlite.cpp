@@ -37,7 +37,7 @@ int NSP_STP_CM::CSqliteDB::CreateDB()
 
 int NSP_STP_CM::CSqliteDB::ConnectDataBase()
 {
-	int ret = 0;
+	//int ret = 0;
 	if (GetIsConnected())
 	{
 		return 0;
@@ -148,7 +148,7 @@ static void print_row(int n_values, char** values)
 	}
 }
 
-int NSP_STP_CM::CSqliteDB::print_result(void* data, int n_columns, char** column_values, char** column_names)
+int NSP_STP_CM::CSqliteDB::print_result(void* /*data*/, int n_columns, char** column_values, char** column_names)
 {
 	//每行触发一次?
 	print_row(n_columns, column_names);

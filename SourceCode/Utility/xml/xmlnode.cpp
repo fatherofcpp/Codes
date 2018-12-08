@@ -795,7 +795,7 @@ static MS_INT32 _f_xmlnode_out_node(const NSP_STP_CM::XMLNODE *M_RESTRICT node, 
 
 MS_INT32 NSP_STP_CM::f_xmlnode_out_node(const NSP_STP_CM::XMLNODE *M_RESTRICT node, MS_CHAR *const M_RESTRICT buf)
 {
-	MS_INT32 len;
+	MS_INT32 len = 0;
 
 	if ((node->type & NSP_STP_CM::XMLNODE_TYPE_ELEMENT) == NSP_STP_CM::XMLNODE_TYPE_ELEMENT)
 	{
@@ -901,7 +901,7 @@ static MS_INT32 _f_xmlnode_siz_node(const NSP_STP_CM::XMLNODE *M_RESTRICT node)
 
 MS_INT32 NSP_STP_CM::f_xmlnode_siz_node(const NSP_STP_CM::XMLNODE *M_RESTRICT node)
 {
-	MS_INT32 len;
+	MS_INT32 len = 0;
 
 	if ((node->type & NSP_STP_CM::XMLNODE_TYPE_ELEMENT) == NSP_STP_CM::XMLNODE_TYPE_ELEMENT)
 	{

@@ -2,7 +2,7 @@
 #include "CmThread.h"
 
 NSP_STP_CM::CThread::CThread(void)
-	:m_Thread(NULL),m_ID(-1),m_bStart(false)
+	:m_Thread(NULL),m_ID(0xFFFFFFFF),m_bStart(false)
 {
 	strcpy(m_threadName, "");
 }

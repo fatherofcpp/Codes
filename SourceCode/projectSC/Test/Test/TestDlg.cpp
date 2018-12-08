@@ -217,7 +217,7 @@ MS_INT32 CTestDlg::test( MCS_CHAR* pBuff )
 
 	MS_INT32 rtn = 0;
 	XMLNODE *base_root = NULL;
-	XMLNODE *node = NULL;
+	//XMLNODE *node = NULL;
 	XML xml;
 	memset(&xml,0,sizeof(xml));
 
@@ -254,9 +254,9 @@ leave:
 	return rtn;
 }
 
-void CALLBACK CTestDlg::thread_exception( void* pParam )
+void CALLBACK CTestDlg::thread_exception( void* /*pParam */)
 {
-	CTestDlg* p_this = (CTestDlg*)pParam;
+	//CTestDlg* p_this = (CTestDlg*)pParam;
 	TRACE("%s\n", __FUNCTION__);
 	return;
 }

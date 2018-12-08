@@ -5,14 +5,14 @@
 #include "Log/CmLog.h"
 
 #define PRINT_TCP  
-
+const int errSocket = -1;
 NSP_STP_CM::CTcp::CTcp(int family):
 	m_family(family)
 {
 	m_sockType = SOCK_STREAM;
 	m_protocol = IPPROTO_IP;
 
-    m_sockFd = -1;
+    m_sockFd = errSocket;
     m_readTimeOut.tv_sec = 4;
     m_readTimeOut.tv_usec = 500 * 1000;
 
@@ -42,7 +42,7 @@ int NSP_STP_CM::CTcp::ConnectService()
 	}
 
     m_sockFd = InitNet();
-    if( m_sockFd == -1 )
+    if( m_sockFd == errSocket )
     {
         PRINT_TCP("[%s]:InitNet failed\n", __FUNCTION__);
         return m_sockFd;
@@ -50,9 +50,13 @@ int NSP_STP_CM::CTcp::ConnectService()
 
     sockaddr_in server;
     memset(&server, 0, sizeof(server));
-    server.sin_family = m_family;
+#if(_WIN32_WINNT < 0x0600)
+	server.sin_family = static_cast<short>(m_family);
+#else
+	server.sin_family = static_cast<ADDRESS_FAMILY>(m_family);
+#endif
     server.sin_addr.s_addr = inet_addr(m_serverIp) /* *((unsigned long*)hp->h_addr)*/;
-    server.sin_port = htons(m_serverPort);
+	server.sin_port = htons(static_cast<u_short>(m_serverPort));
 
     ConnectSocket2Server((sockaddr*)&server, sizeof(server));
 
@@ -74,7 +78,7 @@ int NSP_STP_CM::CTcp::DisconnectService()
 
 int NSP_STP_CM::CTcp::Send2Service(const char *p_data, int i_data)
 {
-    const int send_data_save = i_data;
+    //const int send_data_save = i_data;
     fd_set fds_w, fds_e;
     int i_send;//本次发送数据
     int i_total = 0;//总发送数据
@@ -89,9 +93,9 @@ int NSP_STP_CM::CTcp::Send2Service(const char *p_data, int i_data)
         while (select_count_now ++ < select_count_total)
         {
             FD_ZERO( &fds_w );
-            FD_SET( m_sockFd, &fds_w );
+            FD_SET( static_cast<unsigned int>(m_sockFd), &fds_w );
             FD_ZERO( &fds_e );
-            FD_SET( m_sockFd, &fds_e );
+            FD_SET( static_cast<unsigned int>(m_sockFd), &fds_e );
             time_out.tv_sec = step_select_m / 1000;
             time_out.tv_usec = step_select_m * 1000;
             i_ret = select(m_sockFd + 1, NULL, &fds_w, &fds_e, &time_out);
@@ -126,7 +130,7 @@ int NSP_STP_CM::CTcp::Send2Service(const char *p_data, int i_data)
 
 int NSP_STP_CM::CTcp::RecvFrmService(char *p_data, int i_data)
 {
-    const int read_data_save = i_data;
+    //const int read_data_save = i_data;
     bool b_retry = true;
     fd_set fds_r;
     fd_set fds_e;
@@ -144,9 +148,9 @@ int NSP_STP_CM::CTcp::RecvFrmService(char *p_data, int i_data)
         while (select_count_now ++ < select_count_total)
         {
             FD_ZERO( &fds_r );
-            FD_SET( m_sockFd, &fds_r );
+            FD_SET( static_cast<unsigned int>(m_sockFd), &fds_r );
             FD_ZERO( &fds_e );
-            FD_SET( m_sockFd, &fds_e );
+            FD_SET( static_cast<unsigned int>(m_sockFd), &fds_e );
             time_out.tv_sec = step_select_m / 1000;
             time_out.tv_usec = (step_select_m % 1000) * 1000;
             i_ret = select(m_sockFd + 1, &fds_r, NULL, &fds_e, &time_out);
@@ -241,7 +245,8 @@ int NSP_STP_CM::CTcp::ConnectSocket2Server(sockaddr *p_server, int len)
     int i_val = -1;
     bool b_unreach = false;
 
-    int con_res = connect( m_sockFd, (sockaddr*)p_server, len);
+    //int con_res = 
+		connect( m_sockFd, (sockaddr*)p_server, len);
     //非阻塞模式connect直接返回-1
     if( 1)
     {
@@ -250,7 +255,7 @@ int NSP_STP_CM::CTcp::ConnectSocket2Server(sockaddr *p_server, int len)
         do{
             fd_set fds;
             FD_ZERO( &fds );
-            FD_SET( m_sockFd, &fds );
+            FD_SET( static_cast<unsigned int>(m_sockFd), &fds );
             tv.tv_sec = 0;
             tv.tv_usec = 100000;
             i_val = select( m_sockFd + 1, NULL, &fds, NULL, &tv );
@@ -258,7 +263,7 @@ int NSP_STP_CM::CTcp::ConnectSocket2Server(sockaddr *p_server, int len)
             {
                 PRINT_TCP("[%s]:connect to %d port of %s time out\n", __FUNCTION__, m_serverPort, m_serverIp);
                 DisconnectService();
-                m_sockFd = -1;
+                m_sockFd = errSocket;
                 break;
             }
             select_cnt--;
@@ -266,7 +271,7 @@ int NSP_STP_CM::CTcp::ConnectSocket2Server(sockaddr *p_server, int len)
                                     (  WSAGetLastError() == WSAEWOULDBLOCK )
                                     ) );
 
-        if( m_sockFd == -1 )
+        if( m_sockFd == errSocket )
         {
             //connect time out
             return m_sockFd;
@@ -300,7 +305,7 @@ int NSP_STP_CM::CTcp::ConnectSocket2Server(sockaddr *p_server, int len)
 
     }
 
-    if( m_sockFd == -1 )
+    if( m_sockFd == errSocket )
     {
         if( b_unreach )
         {
@@ -340,11 +345,11 @@ void NSP_STP_CM::CTcp::SetWriteTimeOut(timeval &time_out)
 
 int NSP_STP_CM::CTcp::BindPort()
 {
-	const int sleep_m = 500;
+//	const int sleep_m = 500;
 	int ret = 0;
 
 	m_sockFd = InitNet();
-	if( m_sockFd == -1 )
+	if( m_sockFd == errSocket )
 	{
 		PRINT_TCP("[%s]:InitNet failed\n", __FUNCTION__);
 		return -1;
@@ -365,9 +370,13 @@ int NSP_STP_CM::CTcp::BindFrmServer()
 	int ret = 0;
 	sockaddr_in addr_svr; 
 	addr_svr.sin_addr.s_addr = htonl(INADDR_ANY);
-	addr_svr.sin_family = m_family;  
+#if(_WIN32_WINNT < 0x0600)
+	addr_svr.sin_family = static_cast<short>(m_family);
+#else
+	addr_svr.sin_family = static_cast<ADDRESS_FAMILY>(m_family);
+#endif
 	int port_svr = m_localPort;
-	addr_svr.sin_port = htons(port_svr);       
+	addr_svr.sin_port = htons(static_cast<u_short>(port_svr));
 
 	ret = bind(m_sockFd, (sockaddr*)&addr_svr, sizeof(sockaddr));   
 	if (ret != 0) 
@@ -398,6 +407,6 @@ void NSP_STP_CM::CTcp::CloseSockFd()
 	{
 		shutdown(m_sockFd, 2);
 		closesocket(m_sockFd);
-		m_sockFd = -1;
+		m_sockFd = errSocket;
 	}
 }
