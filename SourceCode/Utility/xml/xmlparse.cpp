@@ -1,36 +1,23 @@
-/*
-* All rights reserved.
-*
-*/
-#include "stdafx.h"
-
-#include "mty.h"
-
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include "xmlnode.h"
 #include "xmlparse.h"
-#include "utils.h"
-#include "MMmem.h"
+#include "xmlutils.h"
 #include "xmlnode.h"
+#pragma warning (disable: 4127)
 
 namespace NSP_STP_CM
 {
 #define MAKE_E_XR(c) (c)
 
-#define DEF_XTT_NONE                0
-#define DEF_XTT_TAG_START           0x10    // <
-#define DEF_XTT_TAG_CLOSE           0x20    // >
-#define DEF_XTT_EQUAL               0x30    // =
+const int DEF_XTT_NONE = 0;
+const int DEF_XTT_TAG_START = 0x10; // <
+const int DEF_XTT_TAG_CLOSE = 0x20;// >
+const int DEF_XTT_EQUAL = 0x30;// =
 
-#define DEF_XTT_TAG_TYPE_END        0x01    // /
-#define DEF_XTT_TAG_TYPE_DECL       0x02    // ?
-#define DEF_XTT_TAG_TYPE_CDATA      0x03    // ![CDATA[
-#define DEF_XTT_TAG_TYPE_COMMENT    0x04    // !--
-#define M_MOVECONST(x)          ((MU_INT32)x)
+const int  DEF_XTT_TAG_TYPE_END = 0x01;// /
+const int  DEF_XTT_TAG_TYPE_DECL = 0x02;// ?
+const int  DEF_XTT_TAG_TYPE_CDATA = 0x03;// ![CDATA[
+const int  DEF_XTT_TAG_TYPE_COMMENT = 0x04;// !--
 
-	static MS_CHAR *get_name_end(const MS_CHAR * buf)
+	MS_CHAR *get_name_end(const MS_CHAR * buf)
 	{
 		while (*buf != 0x00)
 		{
@@ -45,7 +32,7 @@ namespace NSP_STP_CM
 			case '?':
 			case '<':
 			case '=':
-				return ((MS_CHAR *)(M_MOVECONST(buf)));
+				return ((MS_CHAR *)(buf));
 
 			default:
 				buf++;
@@ -53,10 +40,10 @@ namespace NSP_STP_CM
 			}
 		}
 
-		return ((MS_CHAR *)(M_MOVECONST(buf)));
+		return ((MS_CHAR *)(buf));
 	}
 
-	static MS_CHAR *get_next_token(const MS_CHAR * src, MS_INT32 * xtt, MS_INT32 chkeq)
+	MS_CHAR *get_next_token(const MS_CHAR * src, MS_INT32 * xtt, MS_INT32 chkeq)
 	{
 		MS_CHAR pc;
 		MS_CHAR c;
@@ -136,15 +123,15 @@ namespace NSP_STP_CM
 
 			if (*xtt != DEF_XTT_NONE)
 			{
-				return ((MS_CHAR *)(M_MOVECONST(buf)));
+				return ((MS_CHAR *)(buf));
 			}
 			buf++;
 		}
 
-		return ((MS_CHAR *)(M_MOVECONST(buf)));
+		return ((MS_CHAR *)(buf));
 	}
 
-	static XMLNODE *f_xmlparse(XML * xml, const MS_CHAR * buf)
+	XMLNODE *f_xmlparse(XML * xml, const MS_CHAR * buf)
 	{
 		XMLNODE *root = NULL;
 		XMLNODE *parent = NULL;
