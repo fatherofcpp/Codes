@@ -6,7 +6,8 @@
 
 //
 #include "CmFunction/CmDefType.h"
-#include "xml/xmlparse.h"
+//#include "xml/xmlparse.h"
+#include "D:\\WorkSpace\\Nw\\1Code\\git\\Codes\\SourceCode\\Utility\\xml\\xml.hpp"
 #include "MString/CmMString.h"
 #include "DataBase/CmDBSqlite.h"
 #include "Exception/MasException.h"

@@ -118,13 +118,8 @@
     <ClInclude Include="..\..\..\Utility\Socket\CmTransUdp.h" />
     <ClInclude Include="..\..\..\Utility\Thread\CmThread.h" />
     <ClInclude Include="..\..\..\Utility\Thread\CmThreadPool.h" />
-    <ClInclude Include="..\..\..\Utility\xml\bufobj.h" />
-    <ClInclude Include="..\..\..\Utility\xml\hash.h" />
-    <ClInclude Include="..\..\..\Utility\xml\MMmem.h" />
-    <ClInclude Include="..\..\..\Utility\xml\mty.h" />
-    <ClInclude Include="..\..\..\Utility\xml\utils.h" />
-    <ClInclude Include="..\..\..\Utility\xml\xmlnode.h" />
-    <ClInclude Include="..\..\..\Utility\xml\xmlparse.h" />
+    <ClInclude Include="..\..\..\Utility\xml\xml.hpp" />
+    <ClInclude Include="..\..\..\Utility\xml\xmlutils.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -148,12 +143,7 @@
     <ClCompile Include="..\..\..\Utility\Socket\CmTransUdp.cpp" />
     <ClCompile Include="..\..\..\Utility\Thread\CmThread.cpp" />
     <ClCompile Include="..\..\..\Utility\Thread\CmThreadPool.cpp" />
-    <ClCompile Include="..\..\..\Utility\xml\bufobj.cpp" />
-    <ClCompile Include="..\..\..\Utility\xml\hash.cpp" />
-    <ClCompile Include="..\..\..\Utility\xml\MMmem.cpp" />
-    <ClCompile Include="..\..\..\Utility\xml\utils.cpp" />
-    <ClCompile Include="..\..\..\Utility\xml\xmlnode.cpp" />
-    <ClCompile Include="..\..\..\Utility\xml\xmlparse.cpp" />
+    <ClCompile Include="..\..\..\Utility\xml\xmlutils.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

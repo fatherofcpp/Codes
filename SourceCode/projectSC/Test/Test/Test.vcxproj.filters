@@ -102,25 +102,10 @@
     <ClInclude Include="..\..\..\thirdPart\openssl\Aes\CmAes.h">
       <Filter>ThirdPart</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Utility\xml\bufobj.h">
+    <ClInclude Include="..\..\..\Utility\xml\xmlutils.h">
       <Filter>Utility\xml</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Utility\xml\hash.h">
-      <Filter>Utility\xml</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Utility\xml\MMmem.h">
-      <Filter>Utility\xml</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Utility\xml\mty.h">
-      <Filter>Utility\xml</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Utility\xml\utils.h">
-      <Filter>Utility\xml</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Utility\xml\xmlnode.h">
-      <Filter>Utility\xml</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Utility\xml\xmlparse.h">
+    <ClInclude Include="..\..\..\Utility\xml\xml.hpp">
       <Filter>Utility\xml</Filter>
     </ClInclude>
   </ItemGroup>
@@ -182,22 +167,7 @@
     <ClCompile Include="..\..\..\thirdPart\openssl\Aes\CmAes.cpp">
       <Filter>ThirdPart</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Utility\xml\bufobj.cpp">
-      <Filter>Utility\xml</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Utility\xml\hash.cpp">
-      <Filter>Utility\xml</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Utility\xml\utils.cpp">
-      <Filter>Utility\xml</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Utility\xml\xmlnode.cpp">
-      <Filter>Utility\xml</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Utility\xml\xmlparse.cpp">
-      <Filter>Utility\xml</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Utility\xml\MMmem.cpp">
+    <ClCompile Include="..\..\..\Utility\xml\xmlutils.cpp">
       <Filter>Utility\xml</Filter>
     </ClCompile>
   </ItemGroup>

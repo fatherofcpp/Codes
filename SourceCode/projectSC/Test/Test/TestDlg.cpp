@@ -100,7 +100,23 @@ BOOL CTestDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-	test("123");
+	int ret = 0;
+	char m_pBuff[1024 * 16] = "";
+	
+	int tmpLen = 0;//消息体起始位置
+	tmpLen += sprintf(m_pBuff + tmpLen, "<resp>\r\n");
+	tmpLen += sprintf(m_pBuff + tmpLen, "<time>2018-12-9 15:12:45</time>\r\n");
+	tmpLen += sprintf(m_pBuff + tmpLen, "	<name>%s</name>\r\n","na me");
+	tmpLen += sprintf(m_pBuff + tmpLen, "	<meter id=\"1\" id2=\"12\" id3=\"13\">\r\n");
+	tmpLen += sprintf(m_pBuff + tmpLen, "	<function id=\"1\" coding=\"cod11\" error=\"err11\">数据11</function>\r\n");
+	tmpLen += sprintf(m_pBuff + tmpLen, "	<function id=\"2\" coding=\"cod12\" error=\"err12\">数据12</function>\r\n");
+	tmpLen += sprintf(m_pBuff + tmpLen, "	</meter>\r\n");
+	tmpLen += sprintf(m_pBuff + tmpLen, "	<meter id=\"2\" id2=\"22\" id3=\"23\">\r\n");
+	tmpLen += sprintf(m_pBuff + tmpLen, "	<function id=\"1\" coding=\"cod21\" error=\"err21\">数据21</function>\r\n");
+	tmpLen += sprintf(m_pBuff + tmpLen, "	<function id=\"2\" coding=\"cod22\" error=\"err22\">数据22</function>\r\n");
+	tmpLen += sprintf(m_pBuff + tmpLen, "	</meter>\r\n");
+	tmpLen += sprintf(m_pBuff + tmpLen, "</resp>\r\n");
+	test(m_pBuff);
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
@@ -154,11 +170,11 @@ HCURSOR CTestDlg::OnQueryDragIcon()
 }
 
 
-static int ParseTimeNode(XMLNODE* base_root)
+static int ParseTimeNode(NSP_STP_CM::MXml::XMLNODE* base_root)
 {
 	int rtn = 0;
-	XMLNODE* node = NULL;
-	node = f_xmlnode_sch_elem(base_root, "time");
+	NSP_STP_CM::MXml::XMLNODE* node = NULL;
+	node = NSP_STP_CM::MXml::GetInstance()->f_xmlnode_sch_elem(base_root, "time");
 	if (node != NULL)
 	{
 		//2014-02-12 15:30:32
@@ -169,7 +185,8 @@ static int ParseTimeNode(XMLNODE* base_root)
 		int mi = 0;
 		int ss = 0;
 
-		sscanf(node->data,"%d-%d-%d,%d:%d:%d",&yy,&mm,&dd,&hh,&mi,&ss);
+		sscanf(node->data,"%d-%d-%d %d:%d:%d",&yy,&mm,&dd,&hh,&mi,&ss);
+		yy = yy;
 	}
 	else
 	{
@@ -184,44 +201,12 @@ leave:
 
 MS_INT32 CTestDlg::test( MCS_CHAR* pBuff )
 {
-	{
-		M_STRING str = "";
-		str = NSP_STP_CM::str_match_head2sig_last("D:\\aa\\bb\\cc.jg", "\\", false );
-		str = NSP_STP_CM::str_match_head2sig_last("D:\\aa\\bb\\cc.jg", "\\", true );
-		str = NSP_STP_CM::str_match_tail2sig_last("D:\\aa\\bb\\cc.jg", "\\", false );
-		str = NSP_STP_CM::str_match_tail2sig_last("D:\\aa\\bb\\cc.jg", "\\", true );
-		str = NSP_STP_CM::str_match_head2sig_first("D:\\aa\\bb\\cc.jg", "\\", false );
-		str = NSP_STP_CM::str_match_head2sig_first("D:\\aa\\bb\\cc.jg", "\\", true );
-		
-		return 0;
-	}
-	{
-		//HE_SetUnhandledException(thread_exception, NULL, this, NULL, NULL, 0);
-	}
-
-	{
-		CMString str2("200");
-		CMString str5(str2);
-
-		CMString str3 = str2;
-		CMString str4 = "400";
-		
-		str3 = str2;
-		str4 = "500";
-
-		CMString str1;
-		str1 = "100";
-
-		return 0;
-	}
-
 	MS_INT32 rtn = 0;
-	XMLNODE *base_root = NULL;
-	//XMLNODE *node = NULL;
-	XML xml;
+	NSP_STP_CM::MXml::XMLNODE *base_root = NULL;
+	NSP_STP_CM::MXml::XML xml;
 	memset(&xml,0,sizeof(xml));
 
-	rtn = f_xmlparse_init(&xml, pBuff);
+	rtn = NSP_STP_CM::MXml::GetInstance()->f_xmlparse_init(&xml, pBuff);
 	if (rtn < 0)
 	{
 		rtn = -1;
@@ -233,16 +218,11 @@ MS_INT32 CTestDlg::test( MCS_CHAR* pBuff )
 		rtn = -1;
 		goto leave;
 	}	
-
-	if(strcmp(xml.root->name,"save")!=0)
-	{
-		rtn = -1;
-		goto leave;
-	}	
+	
 
 	base_root = xml.root;
 
-	XMLNODE *time_root = NULL;
+	NSP_STP_CM::MXml::XMLNODE *time_root = NULL;
 	time_root = base_root;
 	rtn = ParseTimeNode(time_root);
 	if (rtn < 0)
