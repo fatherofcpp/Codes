@@ -25,6 +25,9 @@ namespace NSP_STP_CM
 #define DEF_EDITOR_ROOT             DEF_VOD_ROOT"/"DEF_EDITOR_DIR
 
 #define DEF_MAX_BACKLOG             64
+#define M_HTONL(x)              (((x) >> 24) | (((x) & 0xff0000) >> 8) | (((x) & 0xff00) << 8) | ((x) << 24))
+#define DEF_STR_LEN_MAX         1024
+#define M_MOVECONST(x)          ((MU_INT32)x)
 
 #ifdef DEF_DEBUG_FD
 #define M_CLOSE(mm)                 \
@@ -59,19 +62,7 @@ namespace NSP_STP_CM
 		MS_INT32    port;
 	} NETADDR;
 
-	typedef struct
-	{
-		MS_CHAR        _protocol[DEF_STR_LEN_MIN];
-		MS_INT32        protocol;
-		MS_INT32        port;
-		MS_INT32        hasdir;
-		MS_INT32        uri_ft;
-		MS_INT32        hosttype;
-		MS_CHAR         host[DEF_STR_LEN_STD];
-		MS_CHAR        _uri[DEF_STR_LEN_STD];
-		MS_CHAR         uri[DEF_STR_LEN_STD];
-		MS_CHAR         param[DEF_STR_LEN_MAX];
-	} RFC_URL;
+
 
 	typedef struct
 	{
@@ -91,9 +82,9 @@ namespace NSP_STP_CM
 
 	static const MS_CHAR *hex = "0123456789ABCDEF";
 
-	MS_INT32 ST_hex2bin(const MS_CHAR *M_RESTRICT src, void *const M_RESTRICT dst);
+	MS_INT32 ST_hex2bin(const MS_CHAR * src, void *const  dst);
 
-	MS_CHAR *ST_fskip_non_space(const MS_CHAR *M_RESTRICT str)
+	MS_CHAR *ST_fskip_non_space(const MS_CHAR * str)
 	{
 		while (*str != 0x00)
 		{
@@ -114,7 +105,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(str)));
 	}
 
-	MS_CHAR *ST_fskip_space(const MS_CHAR *M_RESTRICT str)
+	MS_CHAR *ST_fskip_space(const MS_CHAR * str)
 	{
 		while (*str != 0x00)
 		{
@@ -135,7 +126,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(str)));
 	}
 
-	MS_CHAR *ST_bskip_space(const MS_CHAR *M_RESTRICT str)
+	MS_CHAR *ST_bskip_space(const MS_CHAR * str)
 	{
 		const MS_CHAR *last = NULL;
 
@@ -162,7 +153,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(last+1)));
 	}
 
-	MS_CHAR *ST_fskip_char(const MS_CHAR *M_RESTRICT str, MS_CHAR ch)
+	MS_CHAR *ST_fskip_char(const MS_CHAR * str, MS_CHAR ch)
 	{
 		while (*str != 0x00)
 		{
@@ -179,7 +170,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(str)));
 	}
 
-	MS_CHAR *ST_next_area(const MS_CHAR * M_RESTRICT src, MS_CHAR * M_RESTRICT dst, const MS_CHAR x)
+	MS_CHAR *ST_next_area(const MS_CHAR *  src, MS_CHAR *  dst, const MS_CHAR x)
 	{
 		MS_CHAR match = 0;
 
@@ -241,7 +232,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(src)));
 	}
 
-	MS_INT32 ST_parse_kv(const MS_CHAR * M_RESTRICT src, MS_CHAR * M_RESTRICT key, MS_CHAR * M_RESTRICT value, const MS_CHAR x)
+	MS_INT32 ST_parse_kv(const MS_CHAR *  src, MS_CHAR *  key, MS_CHAR *  value, const MS_CHAR x)
 	{
 		MS_CHAR *p;
 
@@ -257,12 +248,12 @@ namespace NSP_STP_CM
 			return (0);
 		}
 		strcpy(value, p);
-		ST_filt_space_copy(key, NULL, 0, M_TRUE, M_TRUE);
-		ST_filt_space_copy(value, NULL, 0, M_TRUE, M_TRUE);
+		ST_filt_space_copy(key, NULL, 0, true, true);
+		ST_filt_space_copy(value, NULL, 0, true, true);
 		return (1);
 	}
 
-	MU_INT32 ST_strulen(const MS_CHAR * M_RESTRICT str)
+	MU_INT32 ST_strulen(const MS_CHAR *  str)
 	{
 		const MS_CHAR *s;
 
@@ -293,7 +284,7 @@ namespace NSP_STP_CM
 		return (0x7F);
 	}
 
-	MS_INT32 ST_hex2color(const MS_CHAR *M_RESTRICT src, MU_INT32 *const M_RESTRICT dst)
+	MS_INT32 ST_hex2color(const MS_CHAR * src, MU_INT32 *const  dst)
 	{
 		MS_CHAR buf[9];
 		MU_INT32 ulen;
@@ -316,7 +307,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	MS_INT32 ST_hex2bin(const MS_CHAR *M_RESTRICT src, void *const M_RESTRICT dst)
+	MS_INT32 ST_hex2bin(const MS_CHAR * src, void *const  dst)
 	{
 		MS_INT32 i;
 		MS_INT32 len;
@@ -351,7 +342,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	MS_INT32 ST_hex2int(const MS_CHAR *M_RESTRICT src, MU_INT32 *const M_RESTRICT dst)
+	MS_INT32 ST_hex2int(const MS_CHAR * src, MU_INT32 *const  dst)
 	{
 		MS_CHAR buf[9];
 		MU_INT32 ulen;
@@ -373,7 +364,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	MS_INT32 ST_bin2hex(MS_CHAR * M_RESTRICT dst, const void *const src, MS_INT32 len)
+	MS_INT32 ST_bin2hex(MS_CHAR *  dst, const void *const src, MS_INT32 len)
 	{
 		const MU_CHAR *_src = (MU_CHAR *)src;
 
@@ -387,7 +378,7 @@ namespace NSP_STP_CM
 		return (len<<1);
 	}
 
-	MS_INT32 ST_itoa(MS_CHAR * M_RESTRICT dst, MS_INT32 num)
+	MS_INT32 ST_itoa(MS_CHAR *  dst, MS_INT32 num)
 	{
 		MS_INT32 res;
 		MS_INT32 iv;
@@ -468,7 +459,7 @@ namespace NSP_STP_CM
 		return (i);
 	}
 
-	MS_INT32 ST_isalldigit(const MS_CHAR *M_RESTRICT buf, MS_INT32 siz)
+	MS_INT32 ST_isalldigit(const MS_CHAR * buf, MS_INT32 siz)
 	{
 		const MS_CHAR *save = buf;
 		const MS_CHAR *end = (siz <= 0) ? buf - 1 : buf + siz;
@@ -493,7 +484,7 @@ namespace NSP_STP_CM
 		return (buf - save);
 	}
 
-	MS_INT32 ST_is_MU_INT32(const MS_CHAR *M_RESTRICT buf)
+	MS_INT32 ST_is_MU_INT32(const MS_CHAR * buf)
 	{
 		MS_INT32 len;
 		MS_INT64 t;
@@ -526,11 +517,11 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	MS_INT32 ST_is_MS_INT32(const MS_CHAR *M_RESTRICT buf)
+	MS_INT32 ST_is_MS_INT32(const MS_CHAR * buf)
 	{
 		MS_INT32 len;
 		MS_INT64 t;
-		M_BOOL neg = M_FALSE;
+		M_BOOL neg = false;
 
 		if (*buf == 0x00)
 		{
@@ -544,7 +535,7 @@ namespace NSP_STP_CM
 		}
 		if (*buf == '-')
 		{
-			neg = M_TRUE;
+			neg = true;
 			buf++;
 		}
 		len = ST_isalldigit(buf, -1);
@@ -556,7 +547,7 @@ namespace NSP_STP_CM
 
 		t = _atoi64(buf);
 
-		if (neg == M_FALSE)
+		if (neg == false)
 		{
 			if (t > 0x7FFFFFFF)
 			{
@@ -573,7 +564,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	MS_INT32 ST_isdigit_enum(const MS_CHAR *M_RESTRICT buf)
+	MS_INT32 ST_isdigit_enum(const MS_CHAR * buf)
 	{
 		MS_INT32 ng = 1;
 
@@ -632,7 +623,7 @@ namespace NSP_STP_CM
 		*dst = 0x00;
 		len = dst - save;
 
-		if (remove_last == M_TRUE)
+		if (remove_last == true)
 		{
 			if (save[len-1] == c)
 			{
@@ -643,7 +634,7 @@ namespace NSP_STP_CM
 		return (len);
 	}
 
-	MS_INT32 ST_isname(const MS_CHAR *M_RESTRICT _buf)
+	MS_INT32 ST_isname(const MS_CHAR * _buf)
 	{
 		const MU_CHAR *buf = (const MU_CHAR *)_buf;
 
@@ -680,7 +671,7 @@ namespace NSP_STP_CM
 		return (0);
 	}
 
-	MS_INT32 ST_is_asc_name(const MS_CHAR *M_RESTRICT buf)
+	MS_INT32 ST_is_asc_name(const MS_CHAR * buf)
 	{
 		for (; *buf != 0x00; buf++)
 		{
@@ -753,7 +744,7 @@ namespace NSP_STP_CM
 		return (s - src - 1);	/* count does not include NUL */
 	}
 
-	MS_INT32 ST_cvtchar(MS_CHAR *M_RESTRICT buf, MS_CHAR f, MS_CHAR t)
+	MS_INT32 ST_cvtchar(MS_CHAR * buf, MS_CHAR f, MS_CHAR t)
 	{
 		MS_INT32 c = 0;
 
@@ -801,7 +792,7 @@ namespace NSP_STP_CM
 		return (c);
 	}
 
-	MS_INT32 ST_filt_space_copy(MS_CHAR *const M_RESTRICT _src, MS_CHAR *const M_RESTRICT _dst, MS_INT32 dst_siz, M_BOOL filt_head_space, M_BOOL filt_tail_space)
+	MS_INT32 ST_filt_space_copy(MS_CHAR *const  _src, MS_CHAR *const  _dst, MS_INT32 dst_siz, M_BOOL filt_head_space, M_BOOL filt_tail_space)
 	{
 		MS_INT32 len;
 		MS_CHAR *dst = _dst;
@@ -813,11 +804,11 @@ namespace NSP_STP_CM
 			dst = src;
 		}
 
-		if (filt_head_space == M_TRUE)
+		if (filt_head_space == true)
 		{
 			src = ST_fskip_space(src);
 		}
-		if (filt_tail_space == M_TRUE)
+		if (filt_tail_space == true)
 		{
 			end = ST_bskip_space(src);
 			len = end - src;

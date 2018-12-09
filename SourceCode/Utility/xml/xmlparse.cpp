@@ -12,11 +12,12 @@
 #include "xmlnode.h"
 #include "xmlparse.h"
 #include "utils.h"
-#include "xr.h"
-#include "mmem.h"
+#include "MMmem.h"
+#include "xmlnode.h"
 
 namespace NSP_STP_CM
 {
+#define MAKE_E_XR(c) (c)
 
 #define DEF_XTT_NONE                0
 #define DEF_XTT_TAG_START           0x10    // <
@@ -27,10 +28,9 @@ namespace NSP_STP_CM
 #define DEF_XTT_TAG_TYPE_DECL       0x02    // ?
 #define DEF_XTT_TAG_TYPE_CDATA      0x03    // ![CDATA[
 #define DEF_XTT_TAG_TYPE_COMMENT    0x04    // !--
+#define M_MOVECONST(x)          ((MU_INT32)x)
 
-#undef XR_DEV
-#define XR_DEV XR_DEV_XMLPARSE
-	static MS_CHAR *get_name_end(const MS_CHAR *M_RESTRICT buf)
+	static MS_CHAR *get_name_end(const MS_CHAR * buf)
 	{
 		while (*buf != 0x00)
 		{
@@ -56,7 +56,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(buf)));
 	}
 
-	static MS_CHAR *get_next_token(const MS_CHAR *M_RESTRICT src, MS_INT32 *M_RESTRICT xtt, MS_INT32 chkeq)
+	static MS_CHAR *get_next_token(const MS_CHAR * src, MS_INT32 * xtt, MS_INT32 chkeq)
 	{
 		MS_CHAR pc;
 		MS_CHAR c;
@@ -144,7 +144,7 @@ namespace NSP_STP_CM
 		return ((MS_CHAR *)(M_MOVECONST(buf)));
 	}
 
-	static XMLNODE *f_xmlparse(XML *M_RESTRICT xml, const MS_CHAR *M_RESTRICT buf)
+	static XMLNODE *f_xmlparse(XML * xml, const MS_CHAR * buf)
 	{
 		XMLNODE *root = NULL;
 		XMLNODE *parent = NULL;
@@ -209,7 +209,7 @@ namespace NSP_STP_CM
 					bufobj.buf[len] = 0x00;
 
 					len = ST_filt_token_copy(bufobj.buf, NULL, "<!--", "-->");
-					len = ST_filt_space_copy(bufobj.buf, NULL, 0, M_TRUE, M_TRUE);
+					len = ST_filt_space_copy(bufobj.buf, NULL, 0, true, true);
 				}
 				if (len > 0)
 				{
@@ -291,7 +291,7 @@ namespace NSP_STP_CM
 						bufobj.buf[len] = 0x00;
 
 						len = ST_filt_token_copy(bufobj.buf, NULL, "<!--", "-->");
-						len = ST_filt_space_copy(bufobj.buf, NULL, 0, M_TRUE, M_TRUE);
+						len = ST_filt_space_copy(bufobj.buf, NULL, 0, true, true);
 					}
 					if (len > 0)
 					{
@@ -518,14 +518,14 @@ ERR:
 		return (NULL);
 	}
 
-	MS_INT32 f_xmlparse_init(XML *M_RESTRICT xml, const MS_CHAR *M_RESTRICT buf)
+	MS_INT32 f_xmlparse_init(XML * xml, const MS_CHAR * buf)
 	{
 		XMLNODE **pnode;
 
 		memset(xml, 0, sizeof(XML));
 		while (*buf != 0x00)
 		{
-			pnode = (XMLNODE **)M_MALLOC((xml->size+1) * sizeof(XMLNODE *));
+			pnode = (XMLNODE **)mmem_malloc((xml->size+1) * sizeof(XMLNODE *));
 			if (pnode == NULL)
 			{
 				xml->ecode = MAKE_E_XR(0x0026);
@@ -596,7 +596,5 @@ ERR:
 
 		return (xml->ecode);
 	}
-
-#undef XR_DEV
 
 }

@@ -108,9 +108,6 @@
     <ClInclude Include="..\..\..\Utility\xml\hash.h">
       <Filter>Utility\xml</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Utility\xml\mmem.h">
-      <Filter>Utility\xml</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Utility\xml\MMmem.h">
       <Filter>Utility\xml</Filter>
     </ClInclude>
@@ -124,9 +121,6 @@
       <Filter>Utility\xml</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Utility\xml\xmlparse.h">
-      <Filter>Utility\xml</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Utility\xml\xr.h">
       <Filter>Utility\xml</Filter>
     </ClInclude>
   </ItemGroup>
@@ -194,9 +188,6 @@
     <ClCompile Include="..\..\..\Utility\xml\hash.cpp">
       <Filter>Utility\xml</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Utility\xml\mem.cpp">
-      <Filter>Utility\xml</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Utility\xml\utils.cpp">
       <Filter>Utility\xml</Filter>
     </ClCompile>
@@ -204,6 +195,9 @@
       <Filter>Utility\xml</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Utility\xml\xmlparse.cpp">
+      <Filter>Utility\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Utility\xml\MMmem.cpp">
       <Filter>Utility\xml</Filter>
     </ClCompile>
   </ItemGroup>
