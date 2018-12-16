@@ -6,23 +6,8 @@
 #define M_IN
 #define M_OUT
 //
-
-//to fit win32 && linux
-#ifndef WIN32
-
-typedef unsigned char		BYTE;
-typedef const char*			LPCSTR;
-typedef unsigned long		DWORD;
-typedef int                 BOOL;
-typedef unsigned short		WCHAR;
-typedef void*				LPVOID;
-typedef void*				HANDLE;
-
-#else
-
-#endif
-//
-
+#ifndef M_NSP_STP_TYPE_REMANE
+#define M_NSP_STP_TYPE_REMANE
 //rename
 typedef void	M_VOID;
 
@@ -62,7 +47,9 @@ typedef const size_t		MC_SIZE_T;
 
 typedef std::string			M_STRING;
 typedef const std::string   MC_STRING;
-
 //
+#else
+#endif
+
 
 ///////////////////////////////////////////

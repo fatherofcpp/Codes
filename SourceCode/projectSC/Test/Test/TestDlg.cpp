@@ -6,7 +6,6 @@
 #include "Test.h"
 #include "TestDlg.h"
 #include "afxdialogex.h"
-#include "CmFunction/CmFunction.h"
 
 
 #ifdef _DEBUG
@@ -100,7 +99,7 @@ BOOL CTestDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-	int ret = 0;
+	//int ret = 0;
 	char m_pBuff[1024 * 16] = "";
 	
 	int tmpLen = 0;//消息体起始位置
