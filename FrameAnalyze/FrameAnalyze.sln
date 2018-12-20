@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FrameAnalyze", "FrameAnalyze\FrameAnalyze.vcxproj", "{2965AF7D-BBE8-4AE4-9B7F-A971ACFB0D6C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeoMeasure", "GeoMeasure\GeoMeasure.vcxproj", "{FC386809-37B7-445E-8380-FE2A951C407B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2965AF7D-BBE8-4AE4-9B7F-A971ACFB0D6C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2965AF7D-BBE8-4AE4-9B7F-A971ACFB0D6C}.Debug|Win32.Build.0 = Debug|Win32
+		{2965AF7D-BBE8-4AE4-9B7F-A971ACFB0D6C}.Release|Win32.ActiveCfg = Release|Win32
+		{2965AF7D-BBE8-4AE4-9B7F-A971ACFB0D6C}.Release|Win32.Build.0 = Release|Win32
+		{FC386809-37B7-445E-8380-FE2A951C407B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FC386809-37B7-445E-8380-FE2A951C407B}.Debug|Win32.Build.0 = Debug|Win32
+		{FC386809-37B7-445E-8380-FE2A951C407B}.Release|Win32.ActiveCfg = Release|Win32
+		{FC386809-37B7-445E-8380-FE2A951C407B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
