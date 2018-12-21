@@ -1,0 +1,13 @@
+1.download
+https://opencv.org/releases.html
+version win pack
+2.cmake 
+cmake-gui choose source code path:
+FOLDER/opencv/sources;
+cmake-gui choose build path:
+FOLDER/opencv/sources/cmake-bin-x86;
+FOLDER/opencv/sources/cmake-bin-x64;
+3.compiler
+enter build path;
+INSTALL;
+
