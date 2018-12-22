@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/MFive">
+        <file>Resources/sound/chessone.wav</file>
+        <file>Resources/sound/lose.wav</file>
+        <file>Resources/sound/win.wav</file>
+    </qresource>
+</RCC>
